@@ -1,4 +1,5 @@
 import React from 'react'
+import GetGeo from "../GetGeo";
 import AddCityForm from '../AddCityForm';
 
 const Home = () => {
@@ -6,10 +7,11 @@ const Home = () => {
     <div>
       <h1> Home</h1>
 
-      <AddCityForm />
+      <GetGeo />
 
+      <AddCityForm />
     </div>
-  )
-}
+  );
+};
 
 export default Home;

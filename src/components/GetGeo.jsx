@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Backround from "../images/nasa.jpg";
 
 const GetGeo = () => {
   const [details, setDetails] = useState(null);

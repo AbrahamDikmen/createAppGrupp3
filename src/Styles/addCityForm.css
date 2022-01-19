@@ -1,0 +1,40 @@
+.form-wrapper{
+    color: #fff;
+    background-color: #0B2955;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 22px;
+}
+
+input{
+    padding: 8px 15px;
+    box-sizing: border-box;
+    background-color: #EBEBED;
+    border: 1px solid;
+    border-radius: 8px;
+    border-color: #fff;
+}
+
+input[type=text]:focus{
+    background-color: #fff;
+    font-size: 14px;
+}
+
+input[type=submit]{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #EBEBED;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+    background-color: #b5b5b6;
+}

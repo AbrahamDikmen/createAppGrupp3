@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Backround from "../images/nasa.jpg";
 
 const GetGeo = () => {
   const [details, setDetails] = useState(null);
@@ -16,23 +17,23 @@ const GetGeo = () => {
   let today = `${time}`;
 
   return (
-    <div className="geo">
-      {getUserGeolocationDetails()}
-      <h4>
-        <div>
-          {details && (
-            <ul className="list-group">
+    <div id="geo">
+      <div className="geo-container">
+        {details && (
+          <ul className="list-group">
+            <h2>
               <li className="list-group-item">{today + ""}</li>
+            </h2>
+
+            <p>
               <li className="list-group-item">
-                Location <br />
                 {`${details.city}, ${details.country_name}(${details.country_code})`}
               </li>
-
-              <li className="list-group-item"></li>
-            </ul>
-          )}
-        </div>
-      </h4>
+            </p>
+          </ul>
+        )}
+        {getUserGeolocationDetails()}
+      </div>
     </div>
   );
 };

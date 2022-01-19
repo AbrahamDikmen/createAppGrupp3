@@ -1,5 +1,5 @@
 import React from "react";
-import GetGeo from "../components/GetGeo";
+import GetGeo from "../GetGeo";
 
 const Home = () => {
   return (

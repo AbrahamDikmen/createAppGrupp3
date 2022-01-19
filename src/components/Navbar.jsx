@@ -10,7 +10,6 @@ const navigate = useNavigate();
       
       <div className='content'>
         <p onClick={() => { navigate("/") }}>Hem </p>
-        
       </div>
          
     </div>
@@ -18,3 +17,4 @@ const navigate = useNavigate();
 }
 
 export default Navbar;
+

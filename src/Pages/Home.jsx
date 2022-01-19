@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import GetGeo from "../components/GetGeo";
 
 const Home = () => {
   return (
     <div>
-      <h1> Home</h1>
+      <GetGeo />
     </div>
-  )
-}
+  );
+};
 
 export default Home;

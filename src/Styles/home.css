@@ -1,0 +1,8 @@
+ul {
+  display: table;
+  table-layout: fixed;
+}
+ul li {
+  display: inline-block;
+  padding: 5%;
+}

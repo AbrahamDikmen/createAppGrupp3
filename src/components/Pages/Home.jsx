@@ -1,6 +1,7 @@
-import React from 'react'
+import React from "react";
 import GetGeo from "../GetGeo";
-import AddCityForm from '../AddCityForm';
+import AddCityForm from "../AddCityForm";
+import AnalogueClock from "../AnalogueClock";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <h1> Home</h1>
 
       <GetGeo />
+      <AnalogueClock />
 
       <AddCityForm />
       </div>

@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Pages/Home";
 import ErrorPage from "./components/Pages/ErrorPage";
 import NavbarOne from "./components/NavbarOne";
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 /*City imports */
 import {
@@ -33,9 +32,7 @@ import {
 export default function App() {
   return (
     <Router>
-
       <NavbarOne />
-      <Navbar />
 
       <Routes>
         {/*Page Routes*/}

@@ -16,7 +16,6 @@
 #myCitys {
   font-family: "Readex Pro", sans-serif;
 }
-
-#searchButton :hover {
-  background-color: hotpink;
+#formControl {
+  font-family: "Readex Pro", sans-serif;
 }

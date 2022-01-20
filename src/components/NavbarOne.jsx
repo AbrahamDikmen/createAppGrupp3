@@ -6,6 +6,7 @@ import { Nav } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import { FormControl } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import'../Styles/Navbar.css'
 
 
 const NavbarOne = () => {
@@ -22,7 +23,7 @@ const NavbarOne = () => {
         style={{ maxHeight: '100px' }}
             navbarScroll >
                <Form className="d-flex">
-        <FormControl
+        <FormControl id = "formControl"
           type="search"
           placeholder="Ange en stad"
           className="me-2"

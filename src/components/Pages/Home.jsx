@@ -4,13 +4,17 @@ import AddCityForm from '../AddCityForm';
 
 const Home = () => {
   return (
-    <div>
+
+    <div id="home">
+
+      <div className= "home-Container" >
       <h1> Home</h1>
 
       <GetGeo />
 
       <AddCityForm />
-    </div>
+      </div>
+      </div>
   );
 };
 

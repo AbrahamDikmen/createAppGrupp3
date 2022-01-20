@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200&display=swap");
+
+#navbarBackground {
+  background-color: rgba(235, 235, 237, 1);
+  height: 80px;
+}
+
+#Logo {
+  font-family: "digital display tfb";
+  font-size: 60px;
+  letter-spacing: 3px;
+  line-height: 50%;
+  color: #000000;
+}
+
+#myCitys {
+  font-family: "Readex Pro", sans-serif;
+}
+
+#searchButton :hover {
+  background-color: hotpink;
+}

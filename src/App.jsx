@@ -35,7 +35,7 @@ export default function App() {
     <Router>
 
       <NavbarOne />
-      <Navbar />
+      
 
       <Routes>
         {/*Page Routes*/}

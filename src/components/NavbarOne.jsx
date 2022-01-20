@@ -6,7 +6,8 @@ import { Nav } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import { FormControl } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-import'../Styles/Navbar.css'
+import '../Styles/Navbar.css'
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 
 
 const NavbarOne = () => {
@@ -19,8 +20,8 @@ const NavbarOne = () => {
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
-        className="me-auto my-2 my-lg-0"
-        style={{ maxHeight: '100px' }}
+        className="me-auto  my-lg-0"
+        style={{ maxHeight: '100px', }}
             navbarScroll >
                <Form className="d-flex">
         <FormControl id = "formControl"

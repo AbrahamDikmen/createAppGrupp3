@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 import GetGeo from "../GetGeo";
-import AddCityForm from '../AddCityForm';
+import AddCityForm from "../AddCityForm";
 
 const Home = () => {
   return (

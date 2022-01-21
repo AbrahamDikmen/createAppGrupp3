@@ -16,12 +16,14 @@
 #myCitys {
   font-family: "Readex Pro", sans-serif;
   padding-left: -20px;
+  margin-left: 30px;
 }
 #formControl {
   font-family: "Readex Pro", sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding-right: 200px;
   align-items: center;
+  margin-left: 300px;
 }
 
 #searchButton {

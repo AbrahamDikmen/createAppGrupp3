@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 /*Import components */
 import GetGeo from "./components/GetGeo";
 import Home from "./components/Pages/Home";
@@ -29,9 +30,40 @@ import {
   Tokyo,
   Venice,
 } from "./components/Pages/citys/Citys";
+import { Citys } from "./components/Pages/citys/Citys";
+
 import AnalogueClock from "./components/AnalogueClock";
 
 export default function App() {
+  const [cities, setCities] = useState([]);
+
+  // A function that parses the localStorage.storedCities field, assigns
+  // storedCities the read values. If an error is raised while attempting
+  // to parse the storedCities variable is assigned an empty array.
+  const readLocalStorage = () => {
+    let storedCities;
+    try {
+      storedCities = JSON.parse(localStorage.storedCities);
+    }
+    catch (error) {
+      storedCities = []
+    }
+    return storedCities;
+  }
+
+  // useEffect hook that reads data from static json file and parses
+  // data from localStorage. Concatenates arrays containing cities, 
+  // calls setCities and passes in the concatenated array
+  useEffect(async () => {
+    let rawData = await fetch('../src/jsonfiles/cities-timezones.json');
+    let storedCities = readLocalStorage();
+    let standardCities = await rawData.json();
+    let fullCitiesList = storedCities.concat(standardCities);
+    console.log(fullCitiesList);
+
+    setCities(fullCitiesList);
+  }, []);
+
   return (
     <Router>
       <NavbarOne />
@@ -42,6 +74,7 @@ export default function App() {
         <Route path="*" element={<ErrorPage />} />
 
         {/*City Routes*/}
+        <Route path="/:city" element={<Citys cities={cities} />} />
         <Route path="/Amsterdam" element={<Amsterdam />} />
         <Route path="/Barcelona" element={<Barcelona />} />
         <Route path="/Bergen" element={<Bergen />} />

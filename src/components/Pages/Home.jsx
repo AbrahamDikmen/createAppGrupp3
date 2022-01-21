@@ -2,16 +2,14 @@ import React from "react";
 import GetGeo from "../GetGeo";
 import AddCityForm from "../AddCityForm";
 import AnalogueClock from "../AnalogueClock";
+import AnalogueNightMode from "../AnalogueNightMode";
 
 const Home = () => {
   return (
     <div id="home">
       <div className="home-Container">
-        <h1> Home</h1>
-
         <GetGeo />
         <AnalogueClock />
-
         <AddCityForm />
       </div>
     </div>

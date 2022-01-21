@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200&display=swap");
+@font-face {
+  font-family: digital display tfb;
+  src: url("/src/fonts/digital\ display\ tfb.ttf");
+}
 
 #navbarBackground {
   background-color: rgba(235, 235, 237, 1);
@@ -16,12 +20,14 @@
 #myCitys {
   font-family: "Readex Pro", sans-serif;
   padding-left: -20px;
+  margin-left: 30px;
 }
 #formControl {
   font-family: "Readex Pro", sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding-right: 200px;
   align-items: center;
+  margin-left: 300px;
 }
 
 #searchButton {

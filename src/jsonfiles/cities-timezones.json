@@ -1,0 +1,102 @@
+[
+  {
+    "city": "Malmö",
+    "timezone": "GMT+1",
+    "offset": 1
+  },
+  {
+    "city": "Amsterdam",
+    "timezone": "CET",
+    "offset": 0
+  },
+  {
+    "city": "Eslöv",
+    "timezone": "GMT+1",
+    "offset": 1
+  },
+  {
+    "city": "Moskva",
+    "timezone": "GMT+3",
+    "offset": 3
+  },
+  {
+    "city": "New Delhi",
+    "timezone": "GMT+5.30",
+    "offset": 5.3
+  },
+  {
+    "city": "Shanghai",
+    "timezone": "GMT+8",
+    "offset": 8
+  },
+  {
+    "city": "Jersusalem",
+    "timezone": "GMT+2",
+    "offset": 2
+  },
+  {
+    "city": "Rio de Janeiro",
+    "timezone": "GMT-3",
+    "offset": -3
+  },
+  {
+    "city": "Bogota",
+    "timezone": "GMT-5",
+    "offset": -5
+  },
+  {
+    "city": "Houston",
+    "timezone": "GMT-6",
+    "offset": -6
+  },
+  {
+    "city": "Lund",
+    "timezone": "GMT+1",
+    "offset": 1
+  },
+  {
+    "city": "Mallorca",
+    "timezone": "CET",
+    "offset": 0
+  },
+  {
+    "city": "Dubai",
+    "timezone": "GMT+4",
+    "offset": 4
+  },
+  {
+    "city": "Miami",
+    "timezone": "GMT-5",
+    "offset": -5
+  },
+  {
+    "city": "Istanbul",
+    "timezone": "GMT+3",
+    "offset": 3
+  },
+  {
+    "city": "Cape Town",
+    "timezone": "GMT+2",
+    "offset": 2
+  },
+  {
+    "city": "Tokyo",
+    "timezone": "GMT+9",
+    "offset": 9
+  },
+  {
+    "city": "Bergen",
+    "timezone": "CET",
+    "offset": 0
+  },
+  {
+    "city": "Venice",
+    "timezone": "CET",
+    "offset": 0
+  },
+  {
+    "city": "Barcelona",
+    "timezone": "CET",
+    "offset": 0
+  }
+]

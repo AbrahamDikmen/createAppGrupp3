@@ -1,8 +1,28 @@
 import React from "react";
 
-export const Citys = () => {
+// test med useParams
+import { useParams } from "react-router-dom";
+
+export const Citys = (props) => {
+  let { city } = useParams();
+
+  const cityData = props.cities.find(x => x['city'] == city);
+
+  return (
+    <div>
+      {
+        cityData &&
+        <>
+          <h1>{cityData.city}</h1>
+          <h2>{cityData.timezone}</h2>
+        </>
+      }
+    </div>
+  )
+}
+/*export const Citys = () => {
   return <div></div>;
-};
+};*/
 
 export const Amsterdam = () => {
   return (

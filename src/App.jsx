@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 /*Import components */
+import GetGeo from "./components/GetGeo";
 import Home from "./components/Pages/Home";
 import ErrorPage from "./components/Pages/ErrorPage";
 import NavbarOne from "./components/NavbarOne";

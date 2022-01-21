@@ -6,11 +6,8 @@ import AnalogueNightMode from "../AnalogueNightMode";
 
 const Home = () => {
   return (
-
     <div id="home">
-
-      <div className="home-Container" >
-
+      <div className="home-Container">
         <GetGeo />
         <AnalogueClock />
         <AddCityForm />

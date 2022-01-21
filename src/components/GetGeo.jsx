@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-
 const GetGeo = () => {
   const [details, setDetails] = useState(null);
   const [timeString, setTimeString] = useState(new Date().toLocaleTimeString());

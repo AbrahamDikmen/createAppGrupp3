@@ -9,7 +9,6 @@ const Home = () => {
     <div id="home">
 
       <div className= "home-Container" >
-      <h1> Home</h1>
 
       <GetGeo />
       <AnalogueClock />

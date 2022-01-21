@@ -25,3 +25,10 @@
   color: white;
   letter-spacing: 5px;
 }
+
+#home {
+  background-image: url("/src/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}

@@ -29,6 +29,7 @@ import {
   Tokyo,
   Venice,
 } from "./components/Pages/citys/Citys";
+import AnalogueClock from "./components/AnalogueClock";
 
 export default function App() {
   return (

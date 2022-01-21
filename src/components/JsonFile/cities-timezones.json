@@ -1,0 +1,98 @@
+[
+  {
+    "country": "Sverige",
+    "city": "Malmö",
+    "timezone": "GMT+1"
+  },
+  {
+    "country": "Nederländerna",
+    "city": "Amsterdam",
+    "timezone": "CET"
+  },
+  {
+    "country": "U.S.A",
+    "city": "Los Angeles",
+    "timezone": "GMT+1"
+  },
+
+  {
+    "country": "Indien",
+    "city": "New Delhi",
+    "timezone": "GMT+5.30"
+  },
+  {
+    "country": "Kina",
+    "city": "Shanghai",
+    "timezone": "GMT+8"
+  },
+  {
+    "country": "Israel",
+    "city": "Jersusalem",
+    "timezone": "GMT+2"
+  },
+  {
+    "country": "Brasilien",
+    "city": "Rio de Janeiro",
+    "timezone": "GMT-3"
+  },
+  {
+    "country": "Colombia",
+    "city": "Bogota",
+    "timezone": "GMT-5"
+  },
+  {
+    "country": "U.S.A",
+    "city": "Houston",
+    "timezone": "GMT-6"
+  },
+  {
+    "country": "Argentina",
+    "city": "Buenos Aires",
+    "timezone": "GMT-3"
+  },
+  {
+    "country": "Spanien",
+    "city": "Mallorca",
+    "timezone": "CET"
+  },
+  {
+    "country": "Förenade Arabemiraten",
+    "city": "Dubai",
+    "timezone": "GMT+4"
+  },
+  {
+    "country": "U.S.A",
+    "city": "Miami",
+    "timezone": "GMT-5"
+  },
+  {
+    "country": "Turkiet",
+    "city": "Istanbul",
+    "timezone": "GMT+3"
+  },
+  {
+    "country": "Sydafrika",
+    "city": "Cape Town",
+    "timezone": "GMT+2"
+  },
+  {
+    "country": "Japan",
+    "city": "Tokyo",
+    "timezone": "GMT+9"
+  },
+  {
+    "country": "Norge",
+    "city": "Bergen",
+    "timezone": "CET"
+  },
+  {
+    "country": "Italien",
+    "city": "Venice",
+    "timezone": "CET"
+  },
+  {
+    "country": "Spanien",
+    "city": "Barcelona",
+    "timezone": "CET"
+  }
+]

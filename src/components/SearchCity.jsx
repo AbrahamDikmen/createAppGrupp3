@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import { FormControl } from "react-bootstrap";
-import { Button } from "react-bootstrap";
-export function SearchCity({ placeholder, data }) {
+import { useNavigate } from "react-router-dom";
+import { CloseButton } from "react-bootstrap";
+export function SearchCity({ data }) {
   const [filteredData, setFilteredData] = useState([]);
-  const handleFilter = (event) => {
-    const searchWord = event.target.value;
+  const [searchWord, setSearchWord] = useState("");
 
+  // se det som såhär: [const searchWord,  setSearchWord()] , setSearchWord sätter ett nytt värde på searchWord.
+  const navigate = useNavigate();
+
+  const handleFilter = (event) => {
+    setSearchWord(event.target.value);
+
+    // ger oss en ny array av det vi sökt på
     const newFilter = data.filter((value) => {
       return value.city.toLowerCase().includes(searchWord.toLowerCase());
     });
@@ -15,21 +22,34 @@ export function SearchCity({ placeholder, data }) {
       setFilteredData(newFilter);
     }
   };
+  const clearInput = () => {
+    setSearchWord("");
+    setFilteredData([]);
+  };
+
   return (
     <div id="search">
-      <FormControl
-        className="searchInputs"
-        type="text"
-        placeholder={placeholder}
-        onChange={handleFilter}
-      />
+      <div className="wrapper">
+        <FormControl
+          className="searchInputs"
+          placeholder="Ange en stad..."
+          value={searchWord}
+          onChange={handleFilter}
+        />
+        <CloseButton className="cleanBtn" onClick={clearInput} />
+      </div>
 
       {filteredData.length != 0 && (
-        <div className="dataResults">
-          {filteredData.slice(0, 15).map((value, key) => {
+        <div className="dataResult">
+          {filteredData.slice(0, 5).map((value, key) => {
             return (
-              <a className="dataItem" href={value.image} target="_blank">
-                <p> {value.city}</p>
+              <a
+                key={key}
+                className="dataItem"
+                target="_blank"
+                onClick={() => navigate(`/${value.city}`)}
+              >
+                <p>{value.city}</p>
               </a>
             );
           })}

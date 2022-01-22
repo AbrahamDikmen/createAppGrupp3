@@ -13,7 +13,7 @@ import { SearchCity } from "./SearchCity";
 
 // import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 
-const NavbarOne = (data, placeholder) => {
+const NavbarOne = () => {
   return (
     <Navbar id="navbarBackground" expand="lg">
       <Container fluid>
@@ -25,7 +25,7 @@ const NavbarOne = (data, placeholder) => {
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto  my-lg-0"
-            style={{ maxHeight: "100px" }}
+            style={{ height: "30px" }}
             navbarScroll
           >
             <Form className="d-flex">

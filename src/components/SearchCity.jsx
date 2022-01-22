@@ -2,26 +2,31 @@ import React, { useState } from "react";
 import { FormControl } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { CloseButton } from "react-bootstrap";
+
 export function SearchCity({ data }) {
   const [filteredData, setFilteredData] = useState([]);
   const [searchWord, setSearchWord] = useState("");
 
-  // se det som såhär: [const searchWord,  setSearchWord()] , setSearchWord sätter ett nytt värde på searchWord.
   const navigate = useNavigate();
 
   const handleFilter = (event) => {
     setSearchWord(event.target.value);
 
-    // ger oss en ny array av det vi sökt på
+    //  These here give us new arrays depending on what we have been searching for
+    const searchWord = event.target.value;
     const newFilter = data.filter((value) => {
       return value.city.toLowerCase().includes(searchWord.toLowerCase());
     });
+
+    // Cleans the search filter if there is no text in the "search box"
     if (searchWord === "") {
       setFilteredData([]);
     } else {
       setFilteredData(newFilter);
     }
   };
+
+  // This method also cleans the filter but does that through the x icon
   const clearInput = () => {
     setSearchWord("");
     setFilteredData([]);

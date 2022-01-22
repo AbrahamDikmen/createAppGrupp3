@@ -3,6 +3,7 @@ import GetGeo from "../GetGeo";
 import AddCityForm from "../AddCityForm";
 import AnalogueClock from "../AnalogueClock";
 import AnalogueNightMode from "../AnalogueNightMode";
+import Time from "../Time";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <div className="home-Container">
         <GetGeo />
         <AnalogueClock />
+        <Time></Time>
         <AddCityForm />
       </div>
     </div>

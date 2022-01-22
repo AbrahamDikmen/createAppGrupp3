@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "../Styles/analogue-night-mode.css";
 
 export default function AnalogueClock() {
 
     console.log(new Date().getHours());
 
-    setInterval(() => {
+    useEffect(() => {
+        const timer = setInterval(rotateHands, 1000);
+        return function cleanUp() { clearInterval(timer); }
+    }, [])
+
+    function rotateHands() {
         let time = new Date();
         let hour = time.getHours() * 30 + (time.getMinutes() / 2);
         let minute = time.getMinutes() * 6;
@@ -16,7 +21,7 @@ export default function AnalogueClock() {
             `rotate(${minute}deg)`;
         document.querySelector('#second-hand').style.transform =
             `rotate(${second}deg)`;
-    }, 1000);
+    }
 
     return <div id="testbox">
         <div id="analogue-clock">

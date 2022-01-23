@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Backround from "../images/nasa.jpg";
+import ToggleSwitch from "./ToggleSwitch";
 
 const GetGeo = () => {
   const [details, setDetails] = useState(null);
@@ -18,6 +18,7 @@ const GetGeo = () => {
 
   return (
     <div id="geo">
+      <ToggleSwitch label="ClockType" />
       <div className="geo-container">
         {details && (
           <ul className="list-group">

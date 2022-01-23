@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ToggleSwitch from "./ToggleSwitch";
 
 const GetGeo = () => {
   const [details, setDetails] = useState(null);

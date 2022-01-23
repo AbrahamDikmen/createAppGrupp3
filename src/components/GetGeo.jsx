@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import ToggleSwitch from "./ToggleSwitch";
 import React, { useEffect, useState } from "react";
 

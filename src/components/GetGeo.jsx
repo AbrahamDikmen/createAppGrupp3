@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import ToggleSwitch from "./ToggleSwitch";
 
 const GetGeo = () => {
   const [details, setDetails] = useState(null);
-  const [timeString, setTimeString] = useState(new Date().toLocaleTimeString());
 
   const getUserGeolocationDetails = () => {
     fetch(
@@ -12,10 +12,9 @@ const GetGeo = () => {
       .then((data) => setDetails(data));
   };
 
-  useEffect(() => {
-    getUserGeolocationDetails();
-    setInterval(() => { setTimeString(new Date().toLocaleTimeString()) }, 1000);
-  }, []);
+  let day = new Date(),
+    time = day.toLocaleTimeString();
+  let today = `${time}`;
 
   return (
     <div id="geo">
@@ -23,7 +22,7 @@ const GetGeo = () => {
         {details && (
           <ul className="list-group">
             <h2>
-              <li className="list-group-item">{timeString + ""}</li>
+              <li className="list-group-item">{today + ""}</li>
             </h2>
 
             <p>
@@ -33,6 +32,7 @@ const GetGeo = () => {
             </p>
           </ul>
         )}
+        {getUserGeolocationDetails()}
       </div>
     </div>
   );

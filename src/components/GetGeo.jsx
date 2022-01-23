@@ -1,4 +1,3 @@
-import ToggleSwitch from "./ToggleSwitch";
 import React, { useEffect, useState } from "react";
 
 const GetGeo = () => {
@@ -20,7 +19,6 @@ const GetGeo = () => {
 
   return (
     <div id="geo">
-      <ToggleSwitch label="ClockType" />
       <div className="geo-container">
         {details && (
           <ul className="list-group">

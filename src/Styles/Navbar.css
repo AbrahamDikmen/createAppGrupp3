@@ -22,20 +22,22 @@
 
 #myCitys {
   font-family: "Readex Pro", sans-serif;
-  margin-left: 30px;
+  margin-left: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100px;
 }
 #search .wrapper .searchInputs {
   font-family: "Readex Pro", sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding-right: 200px;
-  margin-left: 300px;
+  margin-left: 90%;
 }
 
 #searchButton {
   color: rgba(11, 41, 85, 1);
   border-color: rgba(11, 41, 85, 1);
   height: 40px;
-  margin-left: 10px;
+  margin-left: 63%;
 }
 
 #searchButton:hover {

@@ -2,6 +2,8 @@ import React from "react";
 import GetGeo from "../GetGeo";
 import AddCityForm from "../AddCityForm";
 import AnalogueClock from "../AnalogueClock";
+import AnalogueNightMode from "../AnalogueNightMode";
+import Time from "../Time";
 
 
 const Home = () => {
@@ -11,6 +13,9 @@ const Home = () => {
         <h1> Home</h1>
         <GetGeo />
         <AnalogueClock />
+        <GetGeo />
+        <AnalogueClock />
+        <Time></Time>
         <AddCityForm />
       </div>
     </div>

@@ -15,7 +15,7 @@ import {
   Bogota,
   CapeTown,
   Dubai,
-  Eslöv,
+  LosAngeles,
   Houston,
   Istanbul,
   Jerusalem,
@@ -44,18 +44,17 @@ export default function App() {
     let storedCities;
     try {
       storedCities = JSON.parse(localStorage.storedCities);
-    }
-    catch (error) {
-      storedCities = []
+    } catch (error) {
+      storedCities = [];
     }
     return storedCities;
-  }
+  };
 
   // useEffect hook that reads data from static json file and parses
-  // data from localStorage. Concatenates arrays containing cities, 
+  // data from localStorage. Concatenates arrays containing cities,
   // calls setCities and passes in the concatenated array
   useEffect(async () => {
-    let rawData = await fetch('../src/jsonfiles/cities-timezones.json');
+    let rawData = await fetch("../src/jsonfiles/cities-timezones.json");
     let storedCities = readLocalStorage();
     let standardCities = await rawData.json();
     let fullCitiesList = storedCities.concat(standardCities);
@@ -81,7 +80,7 @@ export default function App() {
         <Route path="/Bogota" element={<Bogota />} />
         <Route path="/CapeTown" element={<CapeTown />} />
         <Route path="/Dubai" element={<Dubai />} />
-        <Route path="/Eslöv" element={<Eslöv />} />
+        <Route path="/LosAngeles" element={<LosAngeles />} />
         <Route path="/Houston" element={<Houston />} />
         <Route path="/Istanbul" element={<Istanbul />} />
         <Route path="/Jerusalem" element={<Jerusalem />} />

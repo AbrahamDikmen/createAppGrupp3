@@ -14,6 +14,7 @@ export function SearchCity({ data }) {
 
     //  These here give us new arrays depending on what we have been searching for
     const searchWord = event.target.value;
+
     const newFilter = data.filter((value) => {
       return value.city.toLowerCase().includes(searchWord.toLowerCase());
     });
@@ -48,14 +49,14 @@ export function SearchCity({ data }) {
         <div className="dataResult">
           {filteredData.slice(0, 5).map((value, key) => {
             return (
-              <a
-                key={key}
+              <div
                 className="dataItem"
+                key={key}
                 target="_blank"
                 onClick={() => navigate(`/${value.city}`)}
               >
                 <p>{value.city}</p>
-              </a>
+              </div>
             );
           })}
         </div>

@@ -13,9 +13,7 @@ const Home = () => {
         <h1> Home</h1>
         <GetGeo />
         <AnalogueClock />
-        <GetGeo />
-        <AnalogueClock />
-        <Time></Time>
+        <Time/>
         <AddCityForm />
       </div>
     </div>

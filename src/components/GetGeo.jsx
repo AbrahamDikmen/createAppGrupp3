@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-=======
 import React, { useEffect, useState } from "react";
->>>>>>> parent of 0ea4382 (Revert "Merge branch 'main' of https://github.com/AbrahamDikmen/createAppGrupp3")
 
 const GetGeo = () => {
   const [details, setDetails] = useState(null);

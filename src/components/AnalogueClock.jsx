@@ -14,7 +14,7 @@ function AnalogueClock() {
   }, []);
 
   return (
-    <>
+    <div className="clockWrapper">
       <div className="analog_clock">
         <div
           className="hour_hand"
@@ -49,7 +49,7 @@ function AnalogueClock() {
         <span className="eleven">11</span>
         <div className="logo">Tajming</div>
       </div>
-    </>
+    </div>
   );
 }
 

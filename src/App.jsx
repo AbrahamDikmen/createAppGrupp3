@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
+
 /*Import components */
 import GetGeo from "./components/GetGeo";
 import Home from "./components/Pages/Home";
@@ -33,6 +34,7 @@ import {
 import { Citys } from "./components/Pages/citys/Citys";
 
 import AnalogueClock from "./components/AnalogueClock";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   const [cities, setCities] = useState([]);
@@ -65,10 +67,9 @@ export default function App() {
 
   return (
     <Router>
-      <NavbarOne />
+      <Navbar />
 
       <Routes>
-        {/*Page Routes*/}
         <Route path="/" element={<Home />} />
         <Route path="*" element={<ErrorPage />} />
 

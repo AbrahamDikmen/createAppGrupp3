@@ -2,8 +2,6 @@ import React from "react";
 import GetGeo from "../GetGeo";
 import AddCityForm from "../AddCityForm";
 import AnalogueClock from "../AnalogueClock";
-import AnalogueNightMode from "../AnalogueNightMode";
-import Time from "../Time";
 
 
 const Home = () => {

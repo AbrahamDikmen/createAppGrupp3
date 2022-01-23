@@ -25,6 +25,7 @@ input{
 
 input[type=text]:focus{
     background-color: #fff;
+    font-size: 14px;
 }
 
 input[type=submit]{

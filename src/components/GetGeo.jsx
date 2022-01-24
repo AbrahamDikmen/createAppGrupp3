@@ -21,6 +21,7 @@ const GetGeo = () => {
   return (
     <div id="geo">
       <div className="geo-container">
+
         {details && (
           <ul className="list-group">
             <h2>

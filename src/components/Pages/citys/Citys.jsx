@@ -6,20 +6,19 @@ import { useParams } from "react-router-dom";
 export const Citys = (props) => {
   let { city } = useParams();
 
-  const cityData = props.cities.find(x => x['city'] == city);
+  const cityData = props.cities.find((x) => x["city"] == city);
 
   return (
     <div>
-      {
-        cityData &&
+      {cityData && (
         <>
           <h1>{cityData.city}</h1>
           <h2>{cityData.timezone}</h2>
         </>
-      }
+      )}
     </div>
-  )
-}
+  );
+};
 /*export const Citys = () => {
   return <div></div>;
 };*/
@@ -72,10 +71,10 @@ export const Dubai = () => {
   );
 };
 
-export const Eslöv = () => {
+export const LosAngeles = () => {
   return (
     <div>
-      <h1>Eslöv</h1>
+      <h1>Los Angeles</h1>
     </div>
   );
 };

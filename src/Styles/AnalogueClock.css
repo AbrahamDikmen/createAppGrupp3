@@ -134,3 +134,7 @@
   margin-top: 25%;
   left: 37%;
 }
+
+.clockWrapper {
+  min-height: 500px;
+}

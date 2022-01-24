@@ -5,7 +5,7 @@ import { Nav } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import "../Styles/Navbar.css";
-import JsonFile from "./JsonFile/cities-timezones.json";
+import jsonfiles from "../jsonfiles/cities-timezones.json";
 import { SearchCity } from "./SearchCity";
 import earth from "/src/images/earth.png";
 // import { useNavigate } from "react-router-dom";
@@ -32,7 +32,7 @@ const NavbarOne = () => {
             navbarScroll
           >
             <Form className="d-flex">
-              <SearchCity data={JsonFile} />
+              <SearchCity data={jsonfiles} />
 
               <Button id="searchButton" variant="outline-success">
                 Sök

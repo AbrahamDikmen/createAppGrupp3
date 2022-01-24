@@ -14,7 +14,8 @@ const GetGeo = () => {
 
   useEffect(() => {
     getUserGeolocationDetails();
-    setInterval(() => { setTimeString(new Date().toLocaleTimeString()) }, 1000);
+    const timer = setInterval(() => { setTimeString(new Date().toLocaleTimeString()) }, 1000);
+    return function cleanup() { clearInterval(timer); }
   }, []);
 
   return (

@@ -8,6 +8,7 @@ import "../Styles/Navbar.css";
 import jsonfiles from "../jsonfiles/cities-timezones.json";
 import { SearchCity } from "./SearchCity";
 import earth from "/src/images/earth.png";
+import {Link} from "react-router-dom"
 // import { useNavigate } from "react-router-dom";
 // import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 
@@ -16,13 +17,14 @@ const NavbarOne = () => {
   return (
     <Navbar id="navbarBackground" expand="lg">
       <Container fluid>
-        <Navbar.Brand id="Logo" href="#">
-          TAJMING
+        <Navbar.Brand id="Logo" href="">
+            <Link id="textLogo" to="/">TAJMING</Link>
         <img
           src={earth}
           height="50"
             width="50"
           />
+          
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -46,6 +48,7 @@ const NavbarOne = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    
   );
 };
 

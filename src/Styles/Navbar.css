@@ -21,6 +21,10 @@
   color: #000000;
   margin-right: 50px;
 }
+#textLogo {
+  text-decoration: none;
+  color: #000000;
+}
 
 #myCitys {
   font-family: "Readex Pro", sans-serif;

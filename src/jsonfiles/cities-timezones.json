@@ -1,86 +1,4 @@
 [
-   {
-      "city": "Malmö",
-      "timezone": "GMT+1"
-   },
-   {
-      "city": "Amsterdam",
-      "timezone": "CET"
-   },
-   {
-      "city": "Eslöv",
-      "timezone": "GMT+1"
-   },
-   {
-      "city": "Moskva",
-      "timezone": "GMT+3"
-   },
-   {
-      "city": "New Delhi",
-      "timezone": "GMT+5.30"
-   },
-   {
-      "city": "Shanghai",
-      "timezone": "GMT+8"
-   },
-   {
-      "city": "Jerusalem",
-      "timezone": "GMT+2"
-   },
-   {
-      "city": "Rio de Janeiro",
-      "timezone": "GMT-3"
-   },
-   {
-      "city": "Bogota",
-      "timezone": "GMT-5"
-   },
-   {
-      "city": "Houston",
-      "timezone": "GMT-6"
-   },
-   {
-      "city": "Lund",
-      "timezone": "GMT+1"
-   },
-   {
-      "city": "Mallorca",
-      "timezone": "CET"
-   },
-   {
-     "city":"Dubai",
-     "timezone":"GMT+4"
-   },
-   {
-     "city":"Miami",
-     "timezone":"GMT-5" 
-   },
-   {
-    "city":"Istanbul",
-    "timezone":"GMT+3" 
-   },
-   {
-     "city":"Cape Town",
-     "timezone":"GMT+2"
-   },
-   {
-     "city":"Tokyo",
-     "timezone":"GMT+9"
-   },
-   {
-     "city":"Bergen",
-     "timezone":"CET"
-   },
-   {
-     "city":"Venice",
-     "timezone":"CET"
-   },
-   {
-    "city":"Barcelona",
-    "timezone":"CET"   
-   }
-
-]
   {
     "city": "Malmö",
     "timezone": "GMT+1",
@@ -112,7 +30,7 @@
     "offset": 8
   },
   {
-    "city": "Jersusalem",
+    "city": "Jerusalem",
     "timezone": "GMT+2",
     "offset": 2
   },

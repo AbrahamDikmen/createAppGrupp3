@@ -1,16 +1,14 @@
 import React from "react";
-import { Navbar } from "react-bootstrap";
-import { Container } from "react-bootstrap";
-import { Nav } from "react-bootstrap";
-import { Form } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+import  Navbar  from "react-bootstrap/Navbar";
+import Container  from "react-bootstrap/Container";
+import  Nav  from "react-bootstrap/Nav";
+import  Form  from "react-bootstrap/Form";
+import  Button  from "react-bootstrap/Button";
 import "../Styles/Navbar.css";
 import jsonfiles from "../jsonfiles/cities-timezones.json";
 import { SearchCity } from "./SearchCity";
 import earth from "/src/images/earth.png";
 import {Link} from "react-router-dom"
-// import { useNavigate } from "react-router-dom";
-// import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 
 
 const NavbarOne = () => {
@@ -40,8 +38,8 @@ const NavbarOne = () => {
                 Sök
               </Button>
 
-              <Nav.Link id="myCitys" href="#MinaStäder">
-                Mina städer
+              <Nav.Link id="MyCities" href="MinaStäder">
+                            <Link id="MyCities" to="/MinaStäder">Mina Städer</Link>
               </Nav.Link>
             </Form>
           </Nav>

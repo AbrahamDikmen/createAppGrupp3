@@ -26,9 +26,11 @@
   color: #000000;
 }
 
-#myCitys {
+#MyCities {
   font-family: "Readex Pro", sans-serif;
   margin-left: 10%;
+  text-decoration: none;
+  color: #000000;
 }
 
 #search .wrapper .searchInputs {

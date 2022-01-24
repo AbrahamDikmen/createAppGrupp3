@@ -7,14 +7,16 @@
 #navbarBackground {
   background-color: rgba(235, 235, 237, 1);
   height: 80px;
-  align-items: center;
   text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  white-space: nowrap;
 }
 
 #Logo {
   font-family: "digital display tfb";
   font-size: 60px;
-  letter-spacing: 3px;
   line-height: 50%;
   color: #000000;
   margin-right: 50px;
@@ -22,8 +24,9 @@
 
 #myCitys {
   font-family: "Readex Pro", sans-serif;
-  margin-left: 50%;
+  margin-left: 10%;
 }
+
 #search .wrapper .searchInputs {
   font-family: "Readex Pro", sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -33,7 +36,7 @@
   color: rgba(11, 41, 85, 1);
   border-color: rgba(11, 41, 85, 1);
   height: 40px;
-  margin-left: 63%;
+  margin-left: 8%;
 }
 
 #searchButton:hover {
@@ -45,7 +48,6 @@
 #search input {
   background-color: white;
   border: 0;
-
   font-size: 18px;
   padding: 15px;
   height: 40px;

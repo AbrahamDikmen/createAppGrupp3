@@ -4,6 +4,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 0;
+    margin-top: 3%;
 }
 
 h2{

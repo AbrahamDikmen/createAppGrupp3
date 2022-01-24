@@ -24,10 +24,6 @@ const GetGeo = () => {
 
         {details && (
           <ul className="list-group">
-            <h2>
-              <li className="list-group-item">{timeString + ""}</li>
-            </h2>
-
             <p>
               <li className="list-group-item">
                 {`${details.city}, ${details.country_name}(${details.country_code})`}

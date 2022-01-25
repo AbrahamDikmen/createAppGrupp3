@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import '../Styles/Time.css';
+import "../Styles/Time.css";
 
 let city1 = "Malmö";
 let city2 = "Amsterdam";
 let city3 = "Moskva";
-let city4 = "New Delhi";
+let city4 = "Mallorca";
 let city5 = "Shanghai";
 
 let city1offset = 0;

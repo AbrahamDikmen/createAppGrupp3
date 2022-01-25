@@ -3,17 +3,18 @@ import { FormControl } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { CloseButton } from "react-bootstrap";
 import SearchIcon from "@mui/icons-material/Search";
+
 export function SearchCity({ data }) {
   const [filteredData, setFilteredData] = useState([]);
-  const [searchWord, setSearchWord] = useState("");
+  const [wordEntered, setWordEntered] = useState("");
 
   const navigate = useNavigate();
 
   const handleFilter = (event) => {
-    setSearchWord(event.target.value);
+    const searchWord = event.target.value;
+    setWordEntered(searchWord);
 
     //  These here give us new arrays depending on what we have been searching for
-    const searchWord = event.target.value;
 
     const newFilter = data.filter((value) => {
       return value.city.toLowerCase().includes(searchWord.toLowerCase());
@@ -29,21 +30,27 @@ export function SearchCity({ data }) {
 
   // This method also cleans the filter but does that through the x icon
   const clearInput = () => {
-    setSearchWord("");
     setFilteredData([]);
+    setWordEntered("");
   };
 
   return (
     <div id="search">
       <div className="wrapper">
         <FormControl
+          type="text"
           className="searchInputs"
           placeholder="Ange en stad..."
-          value={searchWord}
+          value={wordEntered}
           onChange={handleFilter}
         />
-        <SearchIcon />
-        <CloseButton className="cleanBtn" onClick={clearInput} />
+        <div className="searchIcon">
+          {filteredData.length === 0 ? (
+            <SearchIcon />
+          ) : (
+            <CloseButton onClick={clearInput} className="clearBtn" />
+          )}
+        </div>
       </div>
 
       {filteredData.length != 0 && (

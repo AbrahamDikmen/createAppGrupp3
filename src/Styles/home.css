@@ -32,3 +32,8 @@
   background-size: auto;
   background-position: center;
 }
+
+.container{
+  background-color: rgba(238, 238, 238, 0.4);
+}
+

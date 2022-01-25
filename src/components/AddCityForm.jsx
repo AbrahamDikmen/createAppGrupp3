@@ -95,7 +95,7 @@ const AddCityForm = () => {
         <h3>
           Tidszon
         </h3>
-        <select name="timezone" id="select-timezone" onMouseDown={setSize} onChange={(e) => { updateFormValue(e); resetSize(e); }} onBlur={resetSize} required>
+        <select name="timezone" id="select-timezone" onMouseDown={setSize} onChange={(e) => { updateFormValue(e); resetSize(e); }} onBlur={(e) => resetSize(e)} required>
           <option value="">Välj en tidszon</option>
           {offsets.map((offset) => {
             return <option value={offset} key={offset}>

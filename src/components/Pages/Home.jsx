@@ -21,13 +21,15 @@ const Home = () => {
         <h1>Home</h1>
         <div className="form-check form-switch" onClick={() => handleToggle()}>
           <input
-            style={{ position: "absolute", right: "20px", marginTop: "4%" }}
+            style={{ position: "absolute", right: "100px", marginTop: "2%", width: "3%" }}
             checked={toggle}
             className="form-check-input"
             type="checkbox"
             role="switch"
             id="flexSwitchCheckDefault"
           />
+         
+      
         </div>
         <div className="homeTop">
           {toggle ? <DigitalClock /> : <AnalogueClock />}

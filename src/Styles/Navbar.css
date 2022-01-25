@@ -6,12 +6,6 @@
 
 #navbarBackground {
   background-color: rgba(235, 235, 237, 1);
-  height: 80px;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  white-space: nowrap;
 }
 
 #Logo {
@@ -21,6 +15,7 @@
   color: #000000;
   margin-right: 50px;
 }
+
 #textLogo {
   text-decoration: none;
   color: #000000;
@@ -28,8 +23,6 @@
 
 #MyCities {
   font-family: "Readex Pro", sans-serif;
-  margin-left: 10%;
-  text-decoration: none;
   color: #000000;
 }
 
@@ -42,7 +35,7 @@
   color: rgba(11, 41, 85, 1);
   border-color: rgba(11, 41, 85, 1);
   height: 40px;
-  margin-left: 8%;
+  margin-left: 2%;
 }
 
 #searchButton:hover {
@@ -100,7 +93,8 @@
 .dataItem:hover {
   background-color: lightgray;
 }
-
+/*
 .d-flex {
   padding-left: 100%;
 }
+ */

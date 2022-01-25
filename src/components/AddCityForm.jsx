@@ -7,11 +7,14 @@ const useStates = (initialState = {}) => {
   let [states, setStates] = useState(initialState);
   return [
     states,
-    (changes) => setStates({ ...states, ...changes })
+    (changes) => { setStates({ ...states, ...changes }); }
   ];
 }
 
 const AddCityForm = () => {
+
+  // used to render timezone options
+  const offsets = [-12, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
   // Initialize values for an empty form.
   let emptyFormValues = {
@@ -66,6 +69,13 @@ const AddCityForm = () => {
     storedCities.push(formValues);
     localStorage.storedCities = JSON.stringify(storedCities);
   }
+  // decides the number of rows to be shown when clicking 
+  // on dropdown by changing its size property
+  const setSize = (e) => e.target.size = 5;
+  // we need to call this function when we select/remove focus
+  // from select element to make it behave like a regular dropdown
+  const resetSize = (e) => e.target.size = 0;
+
 
   return (
     <div className="form-wrapper">
@@ -85,15 +95,20 @@ const AddCityForm = () => {
         <h3>
           Tidszon
         </h3>
-        <input type="text" name="timezone" value={timezone} placeholder="Ange tidszon..."
-          required maxLength="10" onChange={updateFormValue} />
-
+        <select name="timezone" id="select-timezone" onMouseDown={setSize} onChange={(e) => { updateFormValue(e); resetSize(e); }} onBlur={resetSize} required>
+          <option value="">Välj en tidszon</option>
+          {offsets.map((offset) => {
+            return <option value={offset} key={offset}>
+              GMT {(offset >= 0 ? '+' : '') + offset}
+            </option>
+          })}
+        </select>
         <br />
         <input type="submit" value="Lägg till" />
 
       </form>
 
-    </div>
+    </div >
   );
 }
 

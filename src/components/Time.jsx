@@ -22,6 +22,8 @@ let city3Hours = 0;
 let city4Hours = 0;
 let city5Hours = 0;
 
+//parses through the json file and adds the correct offset value
+//to the city?offset variable if the name of the city is found
 async function getOffset() {
   let rawData = await fetch("./src/jsonfiles/cities-timezones.json");
   let cities = await rawData.json();
@@ -45,11 +47,15 @@ async function getOffset() {
   }
 }
 
+//a function that show the correct time
+//of the specified cities with diffrent timezones
 function Time() {
+  //calls the getOffset function so it can be used when calculating the right time
   getOffset();
 
   const [date, setDate] = useState(new Date());
 
+  //a function that updates time every second
   function refreshClock() {
     setDate(new Date());
   }
@@ -59,12 +65,15 @@ function Time() {
       clearInterval(timerId);
     };
   }, []);
-
+  //calculates the difference between the local time
+  //and the standard UTC time in hours
   let localOffset = date.getTimezoneOffset() / 60;
 
   let hour = date.getHours();
 
   let minutes = date.getMinutes();
+  //a few if statments that both calculates the time in the different timezones
+  //and adds a 0 in front of the hour/min/sec to make it look more like a digital clock
   if (minutes < 10) {
     minutes = "0" + minutes;
   }
@@ -93,7 +102,7 @@ function Time() {
   if (city5Hours < 10) {
     city5Hours = "0" + city5Hours;
   }
-
+  //Displays the cities/times with bootstrap
   return (
     <>
       <Container>

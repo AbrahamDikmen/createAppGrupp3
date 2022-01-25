@@ -18,7 +18,6 @@ const Home = () => {
   return (
     <div id="home">
       <Container>
-        <h1>Home</h1>
         <div className="form-check form-switch" onClick={() => handleToggle()}>
           <input
             style={{ position: "absolute", right: "100px", marginTop: "2%", width: "3%" }}

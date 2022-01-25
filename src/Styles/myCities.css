@@ -1,0 +1,52 @@
+.cities-container {
+  background-image: url("/src/images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.cities-outer-wrapper{
+  text-align: center;
+  background-color: rgba(238, 238, 238, 0.4);
+  max-width: 75%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  height: 100%;
+  margin: auto;
+}
+
+.cities-inner-wrapper{
+  background-color: #0B2955;  
+  margin: auto;
+  max-width: 75%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cities-inner-wrapper h1{
+  margin: auto;
+  max-width: 50%;
+  font-size: 50px;
+  padding: 30px;
+}
+
+.link-item{
+  font-size: 35px;
+  color: white;
+  text-decoration: none;
+}
+
+.link-item:hover{
+  color:rgba(238, 238, 238, 0.719);
+  cursor: pointer;
+}

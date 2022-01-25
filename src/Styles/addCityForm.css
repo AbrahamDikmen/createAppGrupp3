@@ -1,41 +1,53 @@
+@media screen and (max-width: 768px){
+    .form-wrapper{
+        width: 100%;
+    }     
+}
+
+
+
 .form-wrapper{
     color: #fff;
     background-color: #0B2955;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0;
+    padding: 30px;
     margin-top: 3%;
 }
 
-h2{
-    font-size: 30px;
+.form-wrapper h2{
+    font-size: 36px;
+    margin-bottom: 25px;
 }
 
-h3{
+.form-wrapper h3{
     font-size: 22px;
+    margin-bottom: 5px;
 }
 
-input{
+.form-wrapper input, .form-wrapper select{
     padding: 8px 15px;
     box-sizing: border-box;
     background-color: #EBEBED;
     border: 1px solid;
     border-radius: 8px;
     border-color: #fff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 213px; /* text inputs orginalbredd  */
 }
 
-input[type=text]:focus{
+.form-wrapper input[type=text]:focus{
     background-color: #fff;
 }
 
-input[type=submit]{
-    margin-top: 20px;
-    margin-bottom: 20px;
+.form-wrapper input[type=submit]{
+    width: 15%;
     background-color: #EBEBED;
 }
 
-input[type=submit]:hover {
+.form-wrapper input[type=submit]:hover {
     cursor: pointer;
     background-color: #b5b5b6;
 }

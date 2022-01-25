@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 /*Import components */
 import GetGeo from "./components/GetGeo";
 import Home from "./components/Pages/Home";
+import MyCities from "./components/Pages/MyCities";
 import ErrorPage from "./components/Pages/ErrorPage";
 import NavbarOne from "./components/NavbarOne";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -58,7 +59,6 @@ export default function App() {
     let storedCities = readLocalStorage();
     let standardCities = await rawData.json();
     let fullCitiesList = storedCities.concat(standardCities);
-    console.log(fullCitiesList);
 
     setCities(fullCitiesList);
   }, []);
@@ -71,6 +71,7 @@ export default function App() {
         {/*Page Routes*/}
         <Route path="/" element={<Home />} />
         <Route path="*" element={<ErrorPage />} />
+        <Route path="/MinaStader" element={<MyCities cities={readLocalStorage()} />} />
 
         {/*City Routes*/}
         <Route path="/:city" element={<Citys cities={cities} />} />

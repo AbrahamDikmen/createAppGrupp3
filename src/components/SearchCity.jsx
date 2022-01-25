@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FormControl } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { CloseButton } from "react-bootstrap";
-
+import SearchIcon from "@mui/icons-material/Search";
 export function SearchCity({ data }) {
   const [filteredData, setFilteredData] = useState([]);
   const [searchWord, setSearchWord] = useState("");
@@ -42,6 +42,7 @@ export function SearchCity({ data }) {
           value={searchWord}
           onChange={handleFilter}
         />
+        <SearchIcon />
         <CloseButton className="cleanBtn" onClick={clearInput} />
       </div>
 

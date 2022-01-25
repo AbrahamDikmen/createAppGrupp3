@@ -34,11 +34,6 @@ const NavbarOne = () => {
           </Nav>
           <Form className="d-flex">
             <SearchCity data={jsonfiles} />
-
-            <Button id="searchButton" variant="outline-success">
-              {" "}
-              Sök
-            </Button>
           </Form>
         </Navbar.Collapse>
       </Container>

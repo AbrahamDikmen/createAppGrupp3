@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200&display=swap");
+
+/* Footer, sticks in the bottom of the page */
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 8px;
+  padding-top: 10px;
+  color: white;
+  margin-bottom: -965px;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 16px;
+  background-color: rgba(121, 121, 121, 0.637);
+  text-align: center;
+}

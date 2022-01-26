@@ -2,14 +2,12 @@
 
 /* Footer, sticks in the bottom of the page */
 .footer {
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 8px;
-  padding-top: 10px;
+  padding-top: 8px;
   color: white;
-  margin-bottom: -965px;
   font-family: "Readex Pro", sans-serif;
   font-size: 16px;
   background-color: rgba(121, 121, 121, 0.637);

@@ -9,13 +9,17 @@ export const Citys = (props) => {
   const cityData = props.cities.find((x) => x["city"] == city);
 
   return (
-    <div>
-      {cityData && (
-        <>
-          <h1>{cityData.city}</h1>
-          <h2>{cityData.timezone}</h2>
-        </>
-      )}
+    <div className="city-container">
+      <div className="outer">
+        <div className="inner">
+          {cityData && (
+            <>
+              <h1>{cityData.city}</h1>
+              <h2>{cityData.timezone}</h2>
+            </>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

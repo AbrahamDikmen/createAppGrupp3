@@ -4,11 +4,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "../Styles/Time.css";
 
-let city1 = "Malmö";
-let city2 = "Amsterdam";
-let city3 = "Moskva";
-let city4 = "Mallorca";
-let city5 = "Shanghai";
+let city1 = "London";
+let city2 = "New York";
+let city3 = "Paris";
+let city4 = "Tokyo";
+let city5 = "Sydney";
 
 let city1offset = 0;
 let city2offset = 0;

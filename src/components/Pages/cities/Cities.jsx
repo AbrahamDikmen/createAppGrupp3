@@ -3,7 +3,7 @@ import React from "react";
 // test med useParams
 import { useParams } from "react-router-dom";
 
-export const Citys = (props) => {
+export const Cities = (props) => {
   let { city } = useParams();
 
   const cityData = props.cities.find((x) => x["city"] == city);
@@ -19,9 +19,6 @@ export const Citys = (props) => {
     </div>
   );
 };
-/*export const Citys = () => {
-  return <div></div>;
-};*/
 
 export const Amsterdam = () => {
   return (
@@ -103,10 +100,10 @@ export const Jerusalem = () => {
   );
 };
 
-export const Lund = () => {
+export const BuenosAires = () => {
   return (
     <div>
-      <h1>Lund</h1>
+      <h1>Buenos Aires</h1>
     </div>
   );
 };
@@ -122,7 +119,7 @@ export const Mallorca = () => {
 export const Malmo = () => {
   return (
     <div>
-      <h1>Malmo</h1>
+      <h1>Malmö</h1>
     </div>
   );
 };

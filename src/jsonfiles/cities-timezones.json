@@ -10,7 +10,7 @@
     "offset": 0
   },
   {
-    "city": "Eslöv",
+    "city": "Los Angeles",
     "timezone": "GMT+1",
     "offset": 1
   },
@@ -50,8 +50,8 @@
     "offset": -6
   },
   {
-    "city": "Lund",
-    "timezone": "GMT+1",
+    "city": "Buenos Aires",
+    "timezone": "GMT-3",
     "offset": 1
   },
   {

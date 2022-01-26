@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 /*Import components */
-import GetGeo from "./components/GetGeo";
 import Home from "./components/Pages/Home";
 import MyCities from "./components/Pages/MyCities";
 import ErrorPage from "./components/Pages/ErrorPage";
@@ -20,7 +19,7 @@ import {
   Houston,
   Istanbul,
   Jerusalem,
-  Lund,
+  BuenosAires,
   Mallorca,
   Malmo,
   Miami,
@@ -30,8 +29,8 @@ import {
   Shanghai,
   Tokyo,
   Venice,
-} from "./components/Pages/citys/Citys";
-import { Citys } from "./components/Pages/citys/Citys";
+} from "./components/Pages/cities/Cities";
+import { Cities } from "./components/Pages/cities/Cities";
 
 import AnalogueClock from "./components/AnalogueClock";
 
@@ -71,21 +70,24 @@ export default function App() {
         {/*Page Routes*/}
         <Route path="/" element={<Home />} />
         <Route path="*" element={<ErrorPage />} />
-        <Route path="/MinaStader" element={<MyCities cities={readLocalStorage()} />} />
+        <Route
+          path="/MinaStader"
+          element={<MyCities cities={readLocalStorage()} />}
+        />
 
         {/*City Routes*/}
-        <Route path="/:city" element={<Citys cities={cities} />} />
+        <Route path="/:city" element={<Cities cities={cities} />} />
         <Route path="/Amsterdam" element={<Amsterdam />} />
         <Route path="/Barcelona" element={<Barcelona />} />
         <Route path="/Bergen" element={<Bergen />} />
         <Route path="/Bogota" element={<Bogota />} />
         <Route path="/CapeTown" element={<CapeTown />} />
         <Route path="/Dubai" element={<Dubai />} />
-        <Route path="/LosAngeles" element={<LosAngeles />} />
+        <Route path="/Los Angeles" element={<LosAngeles />} />
         <Route path="/Houston" element={<Houston />} />
         <Route path="/Istanbul" element={<Istanbul />} />
         <Route path="/Jerusalem" element={<Jerusalem />} />
-        <Route path="/Lund" element={<Lund />} />
+        <Route path="/Buenos Aires" element={<BuenosAires />} />
         <Route path="/Mallorca" element={<Mallorca />} />
         <Route path="/Malmo" element={<Malmo />} />
         <Route path="/Miami" element={<Miami />} />

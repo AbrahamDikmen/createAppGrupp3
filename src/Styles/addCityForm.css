@@ -4,6 +4,8 @@
     }     
 }
 
+
+
 .form-wrapper{
     color: #fff;
     background-color: #0B2955;
@@ -24,7 +26,7 @@
     margin-bottom: 5px;
 }
 
-.form-wrapper input{
+.form-wrapper input, .form-wrapper select{
     padding: 8px 15px;
     box-sizing: border-box;
     background-color: #EBEBED;
@@ -33,6 +35,7 @@
     border-color: #fff;
     margin-top: 15px;
     margin-bottom: 15px;
+    width: 213px; /* text inputs orginalbredd  */
 }
 
 .form-wrapper input[type=text]:focus{

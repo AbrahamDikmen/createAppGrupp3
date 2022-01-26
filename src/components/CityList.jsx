@@ -24,16 +24,7 @@ function CityList() {
       <Stack direction="horizontal" gap={3}>
         <Container>
           <Col>
-            <Row>{cityNames[0]}</Row>
-            <Row>{cityNames[1]}</Row>
-            <Row>{cityNames[2]}</Row>
-            <Row>{cityNames[3]}</Row>
-            <Row>{cityNames[4]}</Row>
             <Row>{cityNames[5]}</Row>
-          </Col>
-        </Container>
-        <Container>
-          <Col>
             <Row>{cityNames[6]}</Row>
             <Row>{cityNames[7]}</Row>
             <Row>{cityNames[8]}</Row>
@@ -50,6 +41,18 @@ function CityList() {
             <Row>{cityNames[15]}</Row>
             <Row>{cityNames[16]}</Row>
             <Row>{cityNames[17]}</Row>
+            <Row>{cityNames[18]}</Row>
+          </Col>
+        </Container>
+        <Container>
+          <Col>
+            <Row>{cityNames[19]}</Row>
+            <Row>{cityNames[20]}</Row>
+            <Row>{cityNames[21]}</Row>
+            <Row>{cityNames[22]}</Row>
+            <Row>{cityNames[23]}</Row>
+            <Row>{cityNames[24]}</Row>
+            <Row>{cityNames[25]}</Row>
           </Col>
         </Container>
       </Stack>

@@ -1,4 +1,5 @@
 import React from "react";
+import "../../../Styles/cities.css";
 
 // test med useParams
 import { useParams } from "react-router-dom";

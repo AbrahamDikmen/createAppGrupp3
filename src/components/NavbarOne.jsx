@@ -9,12 +9,11 @@ import { SearchCity } from "./SearchCity";
 import earth from "/src/images/earth.png";
 import {Link} from "react-router-dom"
 
-
+//A navbar thats responsive 
 const NavbarOne = () => {
   return (
     <Navbar id="navbarBackground" expand="lg">
-
-<Container fluid>
+      <Container fluid>
 <Navbar.Brand id="Logo" href="">
 <Link id="textLogo" to="/"> TAJMING
 </Link>
@@ -30,12 +29,9 @@ style={{ maxHeight: "100px" }}
             
 <Nav.Link id="MyCities" href="/MinaStader"> Mina Städer
 </Nav.Link>
-
-</Nav>
+          </Nav>
           <Form className="d-flex">
-            
             <SearchCity data={jsonfiles} />
-            
 <Button id="searchButton" variant="outline-success"> Sök
 </Button>
 </Form>

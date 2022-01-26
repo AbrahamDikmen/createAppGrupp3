@@ -49,7 +49,6 @@ const Home = ({ nightMode, setNightMode }) => {
 
           <div className="form-check form-switch" onClick={() => handleToggle()}>
             <input
-              style={{ width: '3%' }}
               checked={toggle}
               className="form-check-input"
               type="checkbox"

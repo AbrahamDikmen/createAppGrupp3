@@ -3,11 +3,11 @@
   font-family: digital display tfb;
   src: url("/src/fonts/digital\ display\ tfb.ttf");
 }
-
+/*The navbar background*/
 #navbarBackground {
    background-color: rgba(235, 235, 237, 1); 
 }
-
+/*Tajming text*/
 #Logo {
   font-family: "digital display tfb";
   font-size: 60px;
@@ -20,7 +20,7 @@
   text-decoration: none;
   color: #000000;
 }
-
+/*MMy Cities*/
 #MyCities {
   font-family: "Readex Pro", sans-serif;
   color: #000000;
@@ -29,18 +29,6 @@
 #search .wrapper .searchInputs {
   font-family: "Readex Pro", sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#searchButton {
-  color: rgba(11, 41, 85, 1);
-  border-color: rgba(11, 41, 85, 1);
-  height: 40px;
-  margin-left: 2%;
-}
-
-#searchButton:hover {
-  background-color: rgba(11, 41, 85, 1);
-  color: white;
 }
 
 /* SearchCity */
@@ -58,6 +46,9 @@
 }
 
 .cleanBtn {
+  cursor: pointer;
+}
+.searchIcon {
   position: absolute;
   margin-left: 270px;
   margin-top: 7px;
@@ -69,6 +60,9 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow: hidden;
   overflow-y: auto;
+  position: absolute;
+  z-index: 100;
+  width: 300px;
 }
 
 .dataResult::-webkit-scrollbar {

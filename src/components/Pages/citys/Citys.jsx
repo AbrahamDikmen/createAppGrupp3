@@ -1,4 +1,5 @@
 import React from "react";
+import "../../../Styles/cities.css";
 
 // test med useParams
 import { useParams } from "react-router-dom";
@@ -9,13 +10,17 @@ export const Citys = (props) => {
   const cityData = props.cities.find((x) => x["city"] == city);
 
   return (
-    <div>
-      {cityData && (
-        <>
-          <h1>{cityData.city}</h1>
-          <h2>{cityData.timezone}</h2>
-        </>
-      )}
+    <div className="city-container">
+      <div className="outer">
+        <div className="inner">
+          {cityData && (
+            <>
+              <h1>{cityData.city}</h1>
+              <h2>{cityData.timezone}</h2>
+            </>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

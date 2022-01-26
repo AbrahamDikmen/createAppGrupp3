@@ -40,7 +40,8 @@ const Home = ({ nightMode, setNightMode }) => {
   }
 
   let { img, btn, home, container } = nightModeStyle;
-  // style={{ position: "absolute", right: "20px", marginTop: "4%" }}
+
+  // style={{ position: "absolute", right: "100px", marginTop: "2%", width: "3%" }}
   return (
     <div id="home" style={home}>
       <Container style={container}>
@@ -48,7 +49,7 @@ const Home = ({ nightMode, setNightMode }) => {
 
           <div className="form-check form-switch" onClick={() => handleToggle()}>
             <input
-
+              style={{ width: '3%' }}
               checked={toggle}
               className="form-check-input"
               type="checkbox"
@@ -60,7 +61,6 @@ const Home = ({ nightMode, setNightMode }) => {
           <button onClick={toggleNightMode} id="nightmode-btn" style={btn}>
             <img src="src/images/nightmode-btn.png" alt="" height="30" width="30" style={img} />
           </button>
-
         </div>
         <div className="homeTop">
           {toggle ? <DigitalClock /> : nightMode ? <AnalogueNightMode /> : <AnalogueClock />}

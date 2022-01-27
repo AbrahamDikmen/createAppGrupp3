@@ -38,7 +38,7 @@ import AnalogueClock from "./components/AnalogueClock";
 
 export default function App() {
   const [cities, setCities] = useState([]);
-
+  const [nightMode, setNightMode] = useState(false);
   // A function that parses the localStorage.storedCities field, assigns
   // storedCities the read values. If an error is raised while attempting
   // to parse the storedCities variable is assigned an empty array.
@@ -66,13 +66,13 @@ export default function App() {
 
   return (
     <Router>
-      <NavbarOne />
+      <NavbarOne {...{ nightMode }} />
       <Footer />
-      
+
 
       <Routes>
         {/*Page Routes*/}
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home {...{ nightMode, setNightMode }} />} />
         <Route path="*" element={<ErrorPage />} />
         <Route path="/MinaStader" element={<MyCities cities={readLocalStorage()} />} />
 
@@ -98,7 +98,7 @@ export default function App() {
         <Route path="/Shangha" element={<Shanghai />} />
         <Route path="/Tokyo" element={<Tokyo />} />
         <Route path="/Venice" element={<Venice />} />
-        
+
       </Routes>
     </Router>
   );

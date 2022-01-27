@@ -10,9 +10,13 @@ import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 
 //here the navbar begins
-const NavbarOne = () => {
+const NavbarOne = ({ nightMode }) => {
+  let nightModeStyle = {};
+  if (nightMode) {
+    nightModeStyle = { backgroundColor: 'rgb(139, 139, 139)' }
+  }
   return (
-    <Navbar id="navbarBackground" expand="lg">
+    <Navbar id="navbarBackground" expand="lg" style={nightModeStyle}>
       {/*The fluid makes the container responsive */}
       <Container fluid>
         <Navbar.Brand id="Logo" href="">

@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
-import Stack from "react-bootstrap/Stack";
-
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -57,209 +55,245 @@ function CityList() {
 
   return (
     <>
-      <Stack id="cityList" direction="horizontal" gap={1}>
-        <Container>
-          <Col>
-            <Row>
-              <h3
+      <Container className="d-md-flex" id="cityList">
+        <Col id="col1">
+          <Row>
+            <a href={cities[5]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[0]]}`,
                 }}
               >
                 {cities[5]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[6]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[1]]}`,
                 }}
               >
                 {cities[6]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[7]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[2]]}`,
                 }}
               >
                 {cities[7]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[8]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[3]]}`,
                 }}
               >
                 {cities[8]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[9]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[4]]}`,
                 }}
               >
                 {cities[9]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[10]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[5]]}`,
                 }}
               >
                 {cities[10]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[11]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[6]]}`,
                 }}
               >
                 {cities[11]}
-              </h3>
-            </Row>
-          </Col>
-        </Container>
-        <Container>
-          <Col>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+        </Col>
+        <Col id="col2">
+          <Row>
+            <a href={cities[12]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[7]]}`,
                 }}
               >
                 {cities[12]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[13]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[8]]}`,
                 }}
               >
                 {cities[13]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[14]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[9]]}`,
                 }}
               >
                 {cities[14]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[15]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[10]]}`,
                 }}
               >
                 {cities[15]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[16]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[11]]}`,
                 }}
               >
                 {cities[16]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[17]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[12]]}`,
                 }}
               >
                 {cities[17]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[18]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[13]]}`,
                 }}
               >
                 {cities[18]}
-              </h3>
-            </Row>
-          </Col>
-        </Container>
-        <Container>
-          <Col>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+        </Col>
+        <Col id="col3">
+          <Row>
+            <a href={cities[19]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[14]]}`,
                 }}
               >
                 {cities[19]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[20]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[15]]}`,
                 }}
               >
                 {cities[20]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[21]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[16]]}`,
                 }}
               >
                 {cities[21]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[22]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[17]]}`,
                 }}
               >
                 {cities[22]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[23]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[18]]}`,
                 }}
               >
                 {cities[23]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[24]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[19]]}`,
                 }}
               >
                 {cities[24]}
-              </h3>
-            </Row>
-            <Row>
-              <h3
+              </h2>
+            </a>
+          </Row>
+          <Row>
+            <a href={cities[25]}>
+              <h2
                 style={{
                   fontFamily: `${fontStyles[numberArray[20]]}`,
                 }}
               >
                 {cities[25]}
-              </h3>
-            </Row>
-          </Col>
-        </Container>
-      </Stack>
+              </h2>
+            </a>
+          </Row>
+        </Col>
+      </Container>
     </>
   );
 }

@@ -5,7 +5,9 @@
 }
 /*The navbar background*/
 #navbarBackground {
+  position: fixed;
   background-color: rgba(235, 235, 237, 1);
+  width: 100%;
 }
 /*Tajming text*/
 #Logo {

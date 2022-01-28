@@ -67,14 +67,14 @@ export default function App() {
   return (
     <Router>
       <NavbarOne {...{ nightMode }} />
-      <Footer />
-
-
       <Routes>
         {/*Page Routes*/}
         <Route path="/" element={<Home {...{ nightMode, setNightMode }} />} />
         <Route path="*" element={<ErrorPage />} />
-        <Route path="/MinaStader" element={<MyCities cities={readLocalStorage()} />} />
+        <Route
+          path="/MinaStader"
+          element={<MyCities cities={readLocalStorage()} />}
+        />
 
         {/*City Routes*/}
         <Route path="/:city" element={<Citys cities={cities} />} />
@@ -98,8 +98,8 @@ export default function App() {
         <Route path="/Shangha" element={<Shanghai />} />
         <Route path="/Tokyo" element={<Tokyo />} />
         <Route path="/Venice" element={<Venice />} />
-
-      </Routes>
+      </Routes>{" "}
+      <Footer />
     </Router>
   );
 }

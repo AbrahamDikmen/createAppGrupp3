@@ -6,7 +6,10 @@
 /*The navbar background*/
 #navbarBackground {
   background-color: rgba(235, 235, 237, 1);
-  /*position: fixed;*/
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   width: 100%;
 }
 /*Tajming text*/

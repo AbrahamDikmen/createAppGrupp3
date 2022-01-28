@@ -2,14 +2,17 @@
 
 /* Footer, sticks in the bottom of the page */
 .footer {
-  height: 40px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding-top: 8px;
   color: white;
   font-family: "Readex Pro", sans-serif;
   font-size: 16px;
   background-color: rgba(121, 121, 121, 0.637);
-  text-align: center;
+}
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#root main {
+  flex: 1;
 }

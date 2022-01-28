@@ -8,6 +8,7 @@ import ErrorPage from "./components/Pages/ErrorPage";
 import NavbarOne from "./components/NavbarOne";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/footer";
+import "./Styles/main.scss";
 
 /*City imports */
 import {

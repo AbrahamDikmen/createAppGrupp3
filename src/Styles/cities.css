@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Praise&display=swap");
+
 .city-container {
   background-image: url("/src/images/background.jpg");
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: center;
   position: absolute;
   height: 100%;
@@ -36,4 +39,5 @@
 }
 .inner h1 {
   font-size: 75px;
+  font-family: "praise", cursive;
 }

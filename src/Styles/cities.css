@@ -3,6 +3,7 @@
 .city-container {
   background-image: url("/src/images/background.jpg");
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: center;
   position: absolute;
   height: 100%;

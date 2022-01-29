@@ -7,6 +7,7 @@ import ErrorPage from "./components/Pages/ErrorPage";
 import NavbarOne from "./components/NavbarOne";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/footer";
+import "./Styles/main.scss";
 
 /*City imports */
 import {
@@ -66,9 +67,6 @@ export default function App() {
   return (
     <Router>
       <NavbarOne {...{ nightMode }} />
-      <Footer />
-
-
       <Routes>
         {/*Page Routes*/}
         <Route path="/" element={<Home {...{ nightMode, setNightMode }} />} />
@@ -100,8 +98,8 @@ export default function App() {
         <Route path="/Shangha" element={<Shanghai />} />
         <Route path="/Tokyo" element={<Tokyo />} />
         <Route path="/Venice" element={<Venice />} />
-
-      </Routes>
+      </Routes>{" "}
+      <Footer />
     </Router>
   );
 }

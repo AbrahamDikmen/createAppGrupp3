@@ -24,24 +24,54 @@ export default function MyCities({ cities }) {
     setCities(filteredCities);
   }
 
+  // A function that prompts the user to confirm whether or not to remove the locally
+  // stored list of cities. If 'ok' is given the localStorage.clear() function is called
+  const promptLocalStorageClear = () => {
+    let userChoice = confirm('Alla dina tillagda städer kommer att tas bort.\nVill du fortsätta?');
+    if (userChoice) {
+      localStorage.clear();
+      setCities([]);
+    }
+  }
+
   return (
     <div className="cities-container">
 
       <div className="cities-outer-wrapper">
+
         <div className="cities-inner-wrapper">
+
           <h1>Mina Städer</h1>
+
           {
+            /**
+             * Maps the content of storedCities and renders a <Link> containing 
+             * a <div> with the city name for each element.
+             * Additionally a div with functionality to remove each city is rendered.
+             */
             storedCities && storedCities.map((item, i) =>
               <div key={i} className="city-link-wrapper">
                 <Link to={`/${item.city}`} className="link-item">
                   <div>
-                    {item.city} ({item.timezone})
+                    {item.city}
                   </div>
                 </Link>
                 <div onClick={() => removeCity(i)} className="remove-city">X</div>
               </div>)
           }
+
+          {
+            /**
+             * If the length of storedCities is greater than 0 a button with functionality
+             * to clear localStorage will be rendered.
+             */
+            storedCities.length > 0 &&
+            <div className="clear-my-cities">
+              <div onClick={() => promptLocalStorageClear()}>Rensa Mina Städer</div>
+            </div>
+          }
         </div>
+
       </div>
 
     </div>

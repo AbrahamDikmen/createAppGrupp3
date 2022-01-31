@@ -1,132 +1,106 @@
 [
   {
     "city": "London",
-    "timezone": "UTC",
-    "offset": 0
+    "timezone": "Europe/London"
   },
   {
     "city": "New York",
-    "timezone": "UTC-4:00",
-    "offset": -4
+    "timezone": "America/New_York"
   },
   {
     "city": "Paris",
-    "timezone": "UTC+01:00",
-    "offset": 2
+    "timezone": "Europe/Paris"
   },
   {
     "city": "Tokyo",
-    "timezone": "UTC+09:00",
-    "offset": 9
+    "timezone": "Asia/Tokyo"
   },
   {
     "city": "Sydney",
-    "timezone": "UTC+10:00",
-    "offset": 10
+    "timezone": "Australia/Sydney"
   },
   {
     "city": "Honolulu",
-    "timezone": "UTC-10:00",
-    "offset": -10
+    "timezone": "Pacific/Honolulu"
   },
   {
     "city": "Los Angeles",
-    "timezone": "UTC-07:00",
-    "offset": -7
+    "timezone": "America/Los_Angeles"
   },
   {
     "city": "Chihuahua",
-    "timezone": "UTC-06:00",
-    "offset": -6
+    "timezone": "America/Chihuahua"
   },
   {
     "city": "Bogotá",
-    "timezone": "UTC-05:00",
-    "offset": -5
+    "timezone": "America/Bogota"
   },
   {
     "city": "Detroit",
-    "timezone": "UTC-04:00",
-    "offset": -4
+    "timezone": "America/Detroit"
   },
   {
     "city": "Jerusalem",
-    "timezone": "UTC+02:00",
-    "offset": -3
+    "timezone": "Asia/Jerusalem"
   },
   {
     "city": "Lissabon",
-    "timezone": "UTC",
-    "offset": 1
+    "timezone": "Europe/Lisbon"
   },
   {
     "city": "Malmö",
-    "timezone": "UTC+01:00",
-    "offset": 2
+    "timezone": "Europe/Stockholm"
   },
   {
     "city": "Rom",
-    "timezone": "UTC+01:00",
-    "offset": 2
+    "timezone": "Europe/Rome"
   },
   {
     "city": "Amsterdam",
-    "timezone": "UTC+01:00",
-    "offset": 2
+    "timezone": "Europe/Amsterdam"
   },
   {
     "city": "Prag",
-    "timezone": "UTC+01:00",
-    "offset": 2
+    "timezone": "Europe/Prague"
   },
   {
     "city": "Moskva",
-    "timezone": "UTC+03:00",
-    "offset": 3
+    "timezone": "Europe/Moscow"
   },
   {
     "city": "Dubai",
-    "timezone": "UTC+04:00",
-    "offset": 4
+    "timezone": "Asia/Dubai"
   },
   {
     "city": "New Delhi",
-    "timezone": "UTC+05.30",
-    "offset": 5.5
+    "timezone": "Asia/Kolkata"
   },
   {
     "city": "Bangkok",
-    "timezone": "UTC+07:00",
-    "offset": 7
+    "timezone": "Asia/Bangkok"
   },
   {
     "city": "Jakarta",
-    "timezone": "UTC+07:00",
-    "offset": 7
+    "timezone": "Asia/Jakarta"
   },
   {
     "city": "Hongkong",
-    "timezone": "UTC+08:00",
-    "offset": 8
+    "timezone": "Asia/Hong_Kong"
   },
   {
     "city": "Shanghai",
-    "timezone": "UTC+08:00",
-    "offset": 8
+    "timezone": "Asia/Shanghai"
   },
   {
     "city": "Brisbane",
-    "timezone": "UTC+10:00",
-    "offset": 10
+    "timezone": "Australia/Brisbane"
   },
   {
     "city": "Fiji",
-    "timezone": "UTC+12:00",
-    "offset": 12
+    "timezone": "Pacific/Fiji"
   },
   {
     "city": "Auckland",
-    "timezone": "UTC+12:00",
-    "offset": 12
+    "timezone": "Pacific/Auckland"
   }
 ]

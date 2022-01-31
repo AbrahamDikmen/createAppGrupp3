@@ -145,7 +145,7 @@ function Time() {
 
   return (
     <>
-      <Container>
+      <Container className="clock-box">
         <Row>
           <Col className="small-clock">
             <h3>{city1}</h3>

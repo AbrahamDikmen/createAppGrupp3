@@ -46,7 +46,7 @@
 }
 
 .link-item:hover{
-  color:rgba(238, 238, 238, 0.651);
+  color: aquamarine;
   cursor: pointer;
 }
 

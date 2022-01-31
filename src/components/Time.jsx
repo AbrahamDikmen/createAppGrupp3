@@ -10,132 +10,167 @@ let city3 = "Paris";
 let city4 = "Tokyo";
 let city5 = "Sydney";
 
-let city1offset = 0;
-let city2offset = 0;
-let city3offset = 0;
-let city4offset = 0;
-let city5offset = 0;
+let city1TimeZone = "";
+let city2TimeZone = "";
+let city3TimeZone = "";
+let city4TimeZone = "";
+let city5TimeZone = "";
 
-let city1Hours = 0;
-let city2Hours = 0;
-let city3Hours = 0;
-let city4Hours = 0;
-let city5Hours = 0;
+let city1Time = "";
+let city2Time = "";
+let city3Time = "";
+let city4Time = "";
+let city5Time = "";
 
-//parses through the json file and adds the correct offset value
-//to the city?offset variable if the name of the city is found
-async function getOffset() {
+async function getTimeZones() {
   let rawData = await fetch("./src/jsonfiles/cities-timezones.json");
   let cities = await rawData.json();
 
   for (let i = 0; i < cities.length; i++) {
     if (city1 == cities[i].city) {
-      city1offset = cities[i].offset;
+      city1TimeZone = cities[i].timezone;
     }
     if (city2 == cities[i].city) {
-      city2offset = cities[i].offset;
+      city2TimeZone = cities[i].timezone;
     }
     if (city3 == cities[i].city) {
-      city3offset = cities[i].offset;
+      city3TimeZone = cities[i].timezone;
     }
     if (city4 == cities[i].city) {
-      city4offset = cities[i].offset;
+      city4TimeZone = cities[i].timezone;
     }
     if (city5 == cities[i].city) {
-      city5offset = cities[i].offset;
+      city5TimeZone = cities[i].timezone;
     }
   }
 }
 
-//a function that show the correct time
-//of the specified cities with diffrent timezones
-function Time() {
-  //calls the getOffset function so it can be used when calculating the right time
-  getOffset();
+async function getTime1() {
+  let response = await fetch(
+    `http://worldtimeapi.org/api/timezone/${city1TimeZone}`
+  );
 
-  const [date, setDate] = useState(new Date());
-
-  //a function that updates time every second
-  function refreshClock() {
-    setDate(new Date());
+  if (response.status === 200) {
+    const time = await response.json();
+    city1Time = time.datetime;
+    console.log(city1Time);
+  } else {
+    throw new Error("Unable to fetch data");
   }
+}
+
+async function getTime2() {
+  let response = await fetch(
+    `http://worldtimeapi.org/api/timezone/${city2TimeZone}`
+  );
+
+  if (response.status === 200) {
+    const time = await response.json();
+    city2Time = time.datetime;
+    console.log(city2Time);
+  } else {
+    throw new Error("Unable to fetch data");
+  }
+}
+
+async function getTime3() {
+  let response = await fetch(
+    `http://worldtimeapi.org/api/timezone/${city3TimeZone}`
+  );
+
+  if (response.status === 200) {
+    const time = await response.json();
+    city3Time = time.datetime;
+    console.log(city3Time);
+  } else {
+    throw new Error("Unable to fetch data");
+  }
+}
+
+async function getTime4() {
+  let response = await fetch(
+    `http://worldtimeapi.org/api/timezone/${city4TimeZone}`
+  );
+
+  if (response.status === 200) {
+    const time = await response.json();
+    city4Time = time.datetime;
+    console.log(city4Time);
+  } else {
+    throw new Error("Unable to fetch data");
+  }
+}
+
+async function getTime5() {
+  let response = await fetch(
+    `http://worldtimeapi.org/api/timezone/${city5TimeZone}`
+  );
+
+  if (response.status === 200) {
+    const time = await response.json();
+    city5Time = time.datetime;
+    console.log(city5Time);
+  } else {
+    throw new Error("Unable to fetch data");
+  }
+}
+
+function Time() {
+  getTimeZones();
+
+  const [time1, setTime1] = useState("");
+  const [time2, setTime2] = useState("");
+  const [time3, setTime3] = useState("");
+  const [time4, setTime4] = useState("");
+  const [time5, setTime5] = useState("");
+
   useEffect(() => {
-    const timerId = setInterval(refreshClock, 1000);
+    const timer = setInterval(() => {
+      getTime1();
+      getTime2();
+      getTime3();
+      getTime4();
+      getTime5();
+      setTime1(city1Time);
+      setTime2(city2Time);
+      setTime3(city3Time);
+      setTime4(city4Time);
+      setTime5(city5Time);
+    }, 1000);
+
     return function cleanup() {
-      clearInterval(timerId);
+      clearInterval(timer);
     };
   }, []);
-  //calculates the difference between the local time
-  //and the standard UTC time in hours
-  let localOffset = date.getTimezoneOffset() / 60;
 
-  let hour = date.getHours();
-
-  let minutes = date.getMinutes();
-  //a few if statments that both calculates the time in the different timezones
-  //and adds a 0 in front of the hour/min/sec to make it look more like a digital clock
-  if (minutes < 10) {
-    minutes = "0" + minutes;
-  }
-  let seconds = date.getSeconds();
-  if (seconds < 10) {
-    seconds = "0" + seconds;
-  }
-
-  city1Hours = hour + city1offset + localOffset;
-  if (city1Hours < 10) {
-    city1Hours = "0" + city1Hours;
-  }
-  city2Hours = hour + city2offset + localOffset;
-  if (city2Hours < 10) {
-    city2Hours = "0" + city2Hours;
-  }
-  city3Hours = hour + city3offset + localOffset;
-  if (city3Hours < 10) {
-    city3Hours = "0" + city3Hours;
-  }
-  city4Hours = hour + city4offset + localOffset;
-  if (city4Hours < 10) {
-    city4Hours = "0" + city4Hours;
-  }
-  city5Hours = hour + city5offset + localOffset;
-  if (city5Hours < 10) {
-    city5Hours = "0" + city5Hours;
-  }
-  //Displays the cities/times with bootstrap
   return (
     <>
       <Container>
         <Row>
-          <Col>
+          <Col className="small-clock">
             <h3>{city1}</h3>
-            <h3>
-              {city1Hours}:{minutes}:{seconds}
-            </h3>
+            <h3>{`${time1.substring(11, 19)}`}</h3>
+            <h6>{`${time1.substring(0, 10)}`}</h6>
           </Col>
-          <Col>
+          <Col className="small-clock">
             <h3>{city2}</h3>
-            <h3>
-              {city2Hours}:{minutes}:{seconds}
-            </h3>
+            <h3>{`${time2.substring(11, 19)}`}</h3>
+            <h6>{`${time2.substring(0, 10)}`}</h6>
           </Col>
-          <Col>
+          <Col className="small-clock">
             <h3>{city3}</h3>
-            <h3>
-              {city3Hours}:{minutes}:{seconds}
-            </h3>
+            <h3>{`${time3.substring(11, 19)}`}</h3>
+            <h6>{`${time3.substring(0, 10)}`}</h6>
           </Col>
-          <Col>
+          <Col className="small-clock">
             <h3>{city4}</h3>
-            <h3>
-              {city4Hours}:{minutes}:{seconds}
-            </h3>
+            <h3>{`${time4.substring(11, 19)}`}</h3>
+            <h6>{`${time4.substring(0, 10)}`}</h6>
           </Col>
-          <Col>
+          <Col className="small-clock">
             <h3>{city5}</h3>
-            <h3>
-              {city5Hours}:{minutes}:{seconds}
-            </h3>
+            <h3>{`${time5.substring(11, 19)}`}</h3>
+            <h6>{`${time5.substring(0, 10)}`}</h6>
           </Col>
         </Row>
       </Container>

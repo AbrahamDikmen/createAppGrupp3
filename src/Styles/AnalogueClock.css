@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&Arima+Madurai:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&Russo+One@700&display=swap");
 
 .analog_clock {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background-color: lightblue;
-  position: absolute;
+  background-color: #0b2955;
+  border: 1px solid aquamarine;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -16,7 +17,7 @@
 }
 
 .analog_clock::after {
-  background: black;
+  background: white;
   content: "";
   width: 12px;
   height: 12px;
@@ -26,7 +27,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 2px solid #fff;
+  border: 2px solid blue;
 }
 
 .hour_hand {
@@ -34,7 +35,8 @@
   width: 6px;
   height: 85px;
   border-radius: 50%;
-  background: black;
+  background: aquamarine;
+  border: 3px solid white;
   top: 21%;
   left: 49%;
   transform-origin: bottom;
@@ -45,7 +47,8 @@
   width: 5px;
   height: 110px;
   border-radius: 50%;
-  background: black;
+  background: aquamarine;
+  border: 3px solid white;
   top: 13%;
   left: 49%;
   transform-origin: bottom;
@@ -63,8 +66,9 @@
 }
 
 .analog_clock span {
+  color: white;
   position: absolute;
-  font-family: "Arima Madurai";
+  font-family: "Russo One";
 }
 
 .twelve {
@@ -128,6 +132,7 @@
 }
 
 .logo {
+  color: white;
   font-family: "Qwitcher Grypen";
   font-weight: 700;
   font-size: 150%;
@@ -136,5 +141,5 @@
 }
 
 .clockWrapper {
-  min-height: 500px;
+  height: 350px;
 }

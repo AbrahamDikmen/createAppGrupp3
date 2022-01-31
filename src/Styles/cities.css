@@ -30,9 +30,11 @@
 
 @media screen and (max-width: 600px) {
   #city-row {
+    max-width: 100%;
     background-color: initial;
   }
   #city-col {
+    max-width: 100%;
     background-color: initial;
   }
   #city-col h1,
@@ -42,9 +44,11 @@
 }
 @media screen and (max-width: 992px) {
   #city-row {
+    max-width: 75%;
     background-color: initial;
   }
   #city-col {
+    max-width: 75%;
     background-color: initial;
   }
 }

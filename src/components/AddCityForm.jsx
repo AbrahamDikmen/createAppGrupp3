@@ -13,12 +13,16 @@ const useStates = (initialState = {}) => {
   ];
 };
 
+
+async function getTimezones() {
+  let rawData = await fetch('./src/jsonfiles/valid-timezones.json');
+  let timezones = await rawData.json();
+  return timezones;
+}
+
 const AddCityForm = () => {
-  // used to render timezone options
-  const offsets = [
-    -12, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7,
-    8, 9, 10, 11, 12,
-  ];
+
+
 
   // Initialize values for an empty form.
   let emptyFormValues = {
@@ -29,7 +33,17 @@ const AddCityForm = () => {
   // useStates hook to hold values from the form.
   const [formValues, setFormValues] = useStates({ ...emptyFormValues });
   let { city, timezone } = formValues;
+  const [timeZones, setTimezones] = useStates(() => {
+    let timezones = [];
 
+    getTimezones().then((data) => {
+      for (const prop in data) {
+        timezones.push(data[prop].timezone);
+      }
+    });
+    return timezones;
+  })
+  console.log(timeZones);
   // A function that is called when the form is updated, sets values for the
   // formValues state variable
   const updateFormValue = (event) => {
@@ -108,10 +122,10 @@ const AddCityForm = () => {
           required
         >
           <option value="">Välj en tidszon</option>
-          {offsets.map((offset) => {
+          {timeZones.map((offset, i) => {
             return (
-              <option value={offset} key={offset}>
-                GMT {(offset >= 0 ? "+" : "") + offset}
+              <option value={offset} key={i}>
+                {offset}
               </option>
             );
           })}

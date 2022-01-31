@@ -145,32 +145,32 @@ function Time() {
 
   return (
     <>
-      <Container>
+      <Container className="clock-box">
         <Row>
           <Col className="small-clock">
             <h3>{city1}</h3>
             <h3>{`${time1.substring(11, 19)}`}</h3>
-            <h6>{`${time1.substring(0, 10)}`}</h6>
+            <h6>{`${time1.substring(26, 32)}`}</h6>
           </Col>
           <Col className="small-clock">
             <h3>{city2}</h3>
             <h3>{`${time2.substring(11, 19)}`}</h3>
-            <h6>{`${time2.substring(0, 10)}`}</h6>
+            <h6>{`${time2.substring(26, 32)}`}</h6>
           </Col>
           <Col className="small-clock">
             <h3>{city3}</h3>
             <h3>{`${time3.substring(11, 19)}`}</h3>
-            <h6>{`${time3.substring(0, 10)}`}</h6>
+            <h6>{`${time3.substring(26, 32)}`}</h6>
           </Col>
           <Col className="small-clock">
             <h3>{city4}</h3>
             <h3>{`${time4.substring(11, 19)}`}</h3>
-            <h6>{`${time4.substring(0, 10)}`}</h6>
+            <h6>{`${time4.substring(26, 32)}`}</h6>
           </Col>
           <Col className="small-clock">
             <h3>{city5}</h3>
             <h3>{`${time5.substring(11, 19)}`}</h3>
-            <h6>{`${time5.substring(0, 10)}`}</h6>
+            <h6>{`${time5.substring(26, 32)}`}</h6>
           </Col>
         </Row>
       </Container>

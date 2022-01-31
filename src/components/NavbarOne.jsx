@@ -13,7 +13,7 @@ import SearchIcon from "@mui/icons-material/Search";
 const NavbarOne = ({ nightMode }) => {
   let nightModeStyle = {};
   if (nightMode) {
-    nightModeStyle = { backgroundColor: 'rgb(139, 139, 139)' }
+    nightModeStyle = { backgroundColor: "rgb(139, 139, 139)" };
   }
   return (
     <Navbar id="navbarBackground" expand="lg" style={nightModeStyle}>
@@ -34,7 +34,9 @@ const NavbarOne = ({ nightMode }) => {
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: "100px" }}
             navbarScroll
-          >            <Nav.Link id="MyCities" href="/MinaStader">
+          >
+            {" "}
+            <Nav.Link id="MyCities" href="/MinaStader">
               {" "}
               Mina Städer
             </Nav.Link>

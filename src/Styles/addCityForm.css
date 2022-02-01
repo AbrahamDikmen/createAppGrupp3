@@ -26,8 +26,7 @@
   margin-bottom: 5px;
 }
 
-.form-wrapper input,
-.form-wrapper select {
+.form-wrapper input, .form-wrapper select {
   padding: 8px 15px;
   box-sizing: border-box;
   background-color: #ebebed;
@@ -44,7 +43,7 @@
 }
 
 .form-wrapper input[type="submit"] {
-  width: 110%;
+  width: 110px;
   background-color: #ebebed;
 }
 

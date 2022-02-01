@@ -4,8 +4,6 @@
     }     
 }
 
-
-
 .form-wrapper{
     color: #fff;
     background-color: #0B2955;
@@ -14,6 +12,7 @@
     text-align: center;
     padding: 30px;
     margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 .form-wrapper h2{
@@ -43,8 +42,8 @@
 }
 
 .form-wrapper input[type=submit]{
-    width: 15%;
     background-color: #EBEBED;
+    max-width: 110px;
 }
 
 .form-wrapper input[type=submit]:hover {

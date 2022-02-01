@@ -11,26 +11,33 @@ import "./Styles/main.scss";
 
 /*City imports */
 import {
-  Amsterdam,
-  Barcelona,
-  Bergen,
-  Bogota,
-  CapeTown,
-  Dubai,
-  LosAngeles,
-  Houston,
-  Istanbul,
-  Jerusalem,
-  BuenosAires,
-  Mallorca,
-  Malmo,
-  Miami,
-  Moskva,
-  NewDelhi,
-  RiodeJaneiro,
-  Shanghai,
+  London,
+  New_York,
+  Paris,
   Tokyo,
-  Venice,
+  Sydney,
+  Honolulu,
+  LosAngeles,
+  Chihuahua,
+  Bogota,
+  Detroit,
+  Jerusalem,
+  Lissabon,
+  Malmo,
+  Rom,
+  Amsterdam,
+  Prag,
+  Moskva,
+  Dubai,
+  NewDelhi,
+  Bangkok,
+  Jakarta,
+  Hongkong,
+  Shanghai,
+  Brisbane,
+  Fiji,
+  Auckland,
+ 
 } from "./components/Pages/cities/Cities";
 import { Cities } from "./components/Pages/cities/Cities";
 
@@ -78,7 +85,7 @@ export default function App() {
 
         {/*City Routes*/}
         <Route path="/:city" element={<Cities cities={cities} />} />
-        <Route path="/Amsterdam" element={<Amsterdam />} />
+        {/* <Route path="/Amsterdam" element={<Amsterdam />} />
         <Route path="/Barcelona" element={<Barcelona />} />
         <Route path="/Bergen" element={<Bergen />} />
         <Route path="/Bogota" element={<Bogota />} />
@@ -97,7 +104,7 @@ export default function App() {
         <Route path="/RiodeJaneiro" element={<RiodeJaneiro />} />
         <Route path="/Shangha" element={<Shanghai />} />
         <Route path="/Tokyo" element={<Tokyo />} />
-        <Route path="/Venice" element={<Venice />} />
+        <Route path="/Venice" element={<Venice />} /> */}
       </Routes>{" "}
       <Footer />
     </Router>

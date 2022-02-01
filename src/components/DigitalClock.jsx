@@ -20,7 +20,7 @@ export default function DigitalClock({ timezone }) {
         }
         else {
             throw new Error("Unable to fetch data");
-        }
+        } 
     }
 
     useEffect(() => {

@@ -1,31 +1,38 @@
 [
   {
     "city": "London",
-    "timezone": "Europe/London"
+    "timezone": "Europe/London",
+    "info": "London är huvudstad i Storbritannien och i riksdelen England. Staden grundades under namnet Londinium som huvudstad i den romerska provinsen Britannia, för vilken den också utgjorde hamnstad vid floden Themsen."
   },
   {
     "city": "New York",
-    "timezone": "America/New_York"
+    "timezone": "America/New_York",
+    "info": "New York är USA:s mest folkrika stad med 8,2 miljoner invånare enligt den senaste folkräkningen och 19,6 miljoner invånare i storstadsområdet. New York är ansedd som en världsstad med ett starkt globalt inflytande inom ekonomi, massmedia, politik, utbildning, underhållning och mode."
   },
   {
     "city": "Paris",
-    "timezone": "Europe/Paris"
+    "timezone": "Europe/Paris",
+    "info": ""
   },
   {
     "city": "Tokyo",
-    "timezone": "Asia/Tokyo"
+    "timezone": "Asia/Tokyo",
+    "info": ""
   },
   {
     "city": "Sydney",
-    "timezone": "Australia/Sydney"
+    "timezone": "Australia/Sydney",
+    "info": ""
   },
   {
     "city": "Honolulu",
-    "timezone": "Pacific/Honolulu"
+    "timezone": "Pacific/Honolulu",
+    "info": ""
   },
   {
     "city": "Los Angeles",
-    "timezone": "America/Los_Angeles"
+    "timezone": "America/Los_Angeles",
+    "info": ""
   },
   {
     "city": "Chihuahua",

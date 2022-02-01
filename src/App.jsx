@@ -13,7 +13,7 @@ import "./Styles/main.scss";
 import {
   Amsterdam,
   Barcelona,
-  Bergen,
+  London,
   Bogota,
   CapeTown,
   Dubai,
@@ -78,7 +78,7 @@ export default function App() {
 
         {/*City Routes*/}
         <Route path="/:city" element={<Cities cities={cities} />} />
-        <Route path="/Amsterdam" element={<Amsterdam />} />
+        {/* <Route path="/Amsterdam" element={<Amsterdam />} />
         <Route path="/Barcelona" element={<Barcelona />} />
         <Route path="/Bergen" element={<Bergen />} />
         <Route path="/Bogota" element={<Bogota />} />
@@ -97,7 +97,7 @@ export default function App() {
         <Route path="/RiodeJaneiro" element={<RiodeJaneiro />} />
         <Route path="/Shangha" element={<Shanghai />} />
         <Route path="/Tokyo" element={<Tokyo />} />
-        <Route path="/Venice" element={<Venice />} />
+        <Route path="/Venice" element={<Venice />} /> */}
       </Routes>{" "}
       <Footer />
     </Router>

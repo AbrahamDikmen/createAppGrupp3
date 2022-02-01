@@ -21,6 +21,9 @@ export const Cities = (props) => {
             <>
               <h1>{cityData.city}</h1>
               <h2>{cityData.timezone}</h2>
+              { cityData.info && (
+                <p>{cityData.info}</p>
+                )}
             </>
           )}
         </Col>
@@ -45,10 +48,10 @@ export const Barcelona = () => {
   );
 };
 
-export const Bergen = () => {
+export const London = () => {
   return (
     <div>
-      <h1>Bergen</h1>
+      <h1>London</h1>
     </div>
   );
 };

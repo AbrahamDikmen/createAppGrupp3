@@ -1,6 +1,10 @@
 import React from "react";
 import "../../../Styles/cities.css";
 
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
 // test med useParams
 import { useParams } from "react-router-dom";
 
@@ -10,18 +14,18 @@ export const Cities = (props) => {
   const cityData = props.cities.find((x) => x["city"] == city);
 
   return (
-    <div className="city-container">
-      <div className="outer">
-        <div className="inner">
+    <Container fluid id="city-container">
+      <Row id="city-row">
+        <Col id="city-col">
           {cityData && (
             <>
               <h1>{cityData.city}</h1>
               <h2>{cityData.timezone}</h2>
             </>
           )}
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

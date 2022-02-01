@@ -18,43 +18,22 @@ export const Cities = (props) => {
         <Col id="city-col">
           {cityData && (
             <>
-              <h1>{cityData.city}</h1>
-              <h2>{cityData.timezone}</h2>
+               <DigitalClock timezone={cityData.timezone} />
+              <h1>{cityData.city.replace('_', ' ')}</h1>
+              <h2>{cityData.timezone.replace('_', ' ')}</h2>
+          
               { cityData.info && (
                 <p>{cityData.info}</p>
                 )}
             </>
           )}
-          {
-            cityData && (
-              <>
-                <h1>{cityData.city.replace('_', ' ')}</h1>
-                <h2>{cityData.timezone.replace('_', ' ')}</h2>
-                <DigitalClock timezone={cityData.timezone} />
-              </>
-            )
-          }
+       
         </Col>
       </Row>
     </Container>
   );
 };
 
-export const Amsterdam = () => {
-  return (
-    <div>
-      <h1>Amsterdam</h1>
-    </div>
-  );
-};
-
-export const Barcelona = () => {
-  return (
-    <div>
-      <h1>Barcelona</h1>
-    </div>
-  );
-};
 
 export const London = () => {
   return (
@@ -64,26 +43,40 @@ export const London = () => {
   );
 };
 
-export const Bogota = () => {
+export const New_York = () => {
   return (
     <div>
-      <h1>Bogota</h1>
+      <h1>New York</h1>
     </div>
   );
 };
 
-export const CapeTown = () => {
+export const Paris = () => {
   return (
     <div>
-      <h1> CapeTown </h1>
+      <h1>Paris</h1>
+    </div>
+  );
+};
+export const Tokyo = () => {
+  return (
+    <div>
+      <h1>Tokyo</h1>
+    </div>
+  );
+};
+export const Sydney = () => {
+  return (
+    <div>
+      <h1>Sydney</h1>
     </div>
   );
 };
 
-export const Dubai = () => {
+export const Honolulu = () => {
   return (
     <div>
-      <h1>Dubai</h1>
+      <h1>Honolulu</h1>
     </div>
   );
 };
@@ -96,18 +89,26 @@ export const LosAngeles = () => {
   );
 };
 
-export const Houston = () => {
+export const Chihuahua = () => {
   return (
     <div>
-      <h1>Houston</h1>
+      <h1>Chihuahua</h1>
     </div>
   );
 };
 
-export const Istanbul = () => {
+export const Bogota = () => {
   return (
     <div>
-      <h1>Istanbul</h1>
+      <h1>Bogota</h1>
+    </div>
+  );
+};
+
+export const Detroit = () => {
+  return (
+    <div>
+      <h1>Detroit</h1>
     </div>
   );
 };
@@ -120,18 +121,10 @@ export const Jerusalem = () => {
   );
 };
 
-export const BuenosAires = () => {
+export const Lissabon = () => {
   return (
     <div>
-      <h1>Buenos Aires</h1>
-    </div>
-  );
-};
-
-export const Mallorca = () => {
-  return (
-    <div>
-      <h1>Mallorca</h1>
+      <h1>Lissabon</h1>
     </div>
   );
 };
@@ -144,10 +137,26 @@ export const Malmo = () => {
   );
 };
 
-export const Miami = () => {
+export const Rom = () => {
   return (
     <div>
-      <h1>Miami</h1>
+      <h1>Rom</h1>
+    </div>
+  );
+};
+
+export const Amsterdam = () => {
+  return (
+    <div>
+      <h1>Amsterdam</h1>
+    </div>
+  );
+};
+
+export const Prag = () => {
+  return (
+    <div>
+      <h1>Prag</h1>
     </div>
   );
 };
@@ -160,6 +169,14 @@ export const Moskva = () => {
   );
 };
 
+export const Dubai = () => {
+  return (
+    <div>
+      <h1>Dubai</h1>
+    </div>
+  );
+};
+
 export const NewDelhi = () => {
   return (
     <div>
@@ -168,10 +185,26 @@ export const NewDelhi = () => {
   );
 };
 
-export const RiodeJaneiro = () => {
+export const Bangkok = () => {
   return (
     <div>
-      <h1>Rio de Janeiro</h1>
+      <h1>Bangkok</h1>
+    </div>
+  );
+};
+
+export const Jakarta = () => {
+  return (
+    <div>
+      <h1>Jakarta</h1>
+    </div>
+  );
+};
+
+export const Hongkong = () => {
+  return (
+    <div>
+      <h1>Hongkong</h1>
     </div>
   );
 };
@@ -184,18 +217,26 @@ export const Shanghai = () => {
   );
 };
 
-export const Tokyo = () => {
+export const Brisbane = () => {
   return (
     <div>
-      <h1>Tokyo</h1>
+      <h1>Brisbane</h1>
     </div>
   );
 };
 
-export const Venice = () => {
+export const Fiji = () => {
   return (
     <div>
-      <h1>Venice</h1>
+      <h1>Fiji</h1>
+    </div>
+  );
+};
+
+export const Auckland = () => {
+  return (
+    <div>
+      <h1>Auckland</h1>
     </div>
   );
 };

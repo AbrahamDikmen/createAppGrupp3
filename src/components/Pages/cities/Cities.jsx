@@ -121,7 +121,7 @@ export const Mallorca = () => {
   );
 };
 
-export const Malmo = () => {
+export const Malmo = ({}) => {
   return (
     <div>
       <h1>Malmö</h1>

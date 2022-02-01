@@ -49,7 +49,8 @@
   },
   {
     "city": "Malmö",
-    "timezone": "Europe/Stockholm"
+    "timezone": "Europe/Stockholm",
+    "imgMalmo": "https://media.istockphoto.com/photos/vastra-hamnen-at-sunset-picture-id502666681?s=612x612"
   },
   {
     "city": "Rom",

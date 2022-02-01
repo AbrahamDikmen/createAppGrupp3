@@ -7,7 +7,6 @@ import jsonfiles from "../jsonfiles/cities-timezones.json";
 import { SearchCity } from "./SearchCity";
 import earth from "/src/images/earth.png";
 import { Link } from "react-router-dom";
-import SearchIcon from "@mui/icons-material/Search";
 
 //here the navbar begins
 const NavbarOne = ({ nightMode }) => {

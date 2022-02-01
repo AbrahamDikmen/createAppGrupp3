@@ -9,13 +9,19 @@
 .small-clock {
   padding-top: 1%;
   font-family: "Russo One";
-  color: white;
   background-color: #0b2955;
   border-radius: 4%;
   margin: 1%;
 }
 
 .small-clock:hover {
-  color: aquamarine;
   transform: scale(1.1);
+}
+.small-clock a {
+  text-decoration: none;
+  color: white;
+}
+.small-clock a:hover {
+  text-decoration: none;
+  color: aquamarine;
 }

@@ -1,12 +1,11 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import DigitalClock from '../../DigitalClock';
 import "../../../Styles/cities.css";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
-// test med useParams
-import { useParams } from "react-router-dom";
 
 export const Cities = (props) => {
   let { city } = useParams();
@@ -26,6 +25,15 @@ export const Cities = (props) => {
                 )}
             </>
           )}
+          {
+            cityData && (
+              <>
+                <h1>{cityData.city.replace('_', ' ')}</h1>
+                <h2>{cityData.timezone.replace('_', ' ')}</h2>
+                <DigitalClock timezone={cityData.timezone} />
+              </>
+            )
+          }
         </Col>
       </Row>
     </Container>

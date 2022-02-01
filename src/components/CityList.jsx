@@ -3,7 +3,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-let cityNames = [];
 let fontStyles = [
   "Abril Fatface",
   "Alfa Slab One",
@@ -28,13 +27,14 @@ let fontStyles = [
   "Yeseva One",
 ];
 
-async function getCities() {
-  let rawData = await fetch("./src/jsonfiles/cities-timezones.json");
-  let cities = await rawData.json();
+async function getCities(cities) {
+  let cityNames = [];
 
   for (let i = 0; i < cities.length; i++) {
     cityNames[i] = cities[i].city;
   }
+
+  return cityNames;
 }
 
 let numberArray = [];
@@ -48,10 +48,15 @@ function randomizeFonts() {
 }
 
 function CityList() {
-  getCities();
-  randomizeFonts();
+  const [cities, setCities] = useState([]);
 
-  const [cities, setCities] = useState(cityNames);
+  useEffect(async () => {
+    let rawData = await fetch("./src/jsonfiles/cities-timezones.json");
+    let citiesList = await rawData.json();
+    citiesList = await getCities(citiesList);
+    randomizeFonts();
+    setCities(citiesList);
+  }, []);
 
   return (
     <>

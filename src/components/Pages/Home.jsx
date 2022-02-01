@@ -9,9 +9,7 @@ import DigitalClock from "../DigitalClock";
 import Container from 'react-bootstrap/Container';
 
 const Home = ({ nightMode, setNightMode }) => {
-  const [toggle, setToggle] = useState(false);
-
-
+  
   let nightModeStyle = {};
 
   if (nightMode) {
@@ -30,36 +28,48 @@ const Home = ({ nightMode, setNightMode }) => {
     }
   }
 
-
-  const handleToggle = () => {
-    setToggle(!toggle);
-  };
-
   const toggleNightMode = () => {
     setNightMode(!nightMode);
   }
 
   let { img, btn, home, container } = nightModeStyle;
 
-  // style={{ position: "absolute", right: "100px", marginTop: "2%", width: "3%" }}
+  //CommentAli
+  const [toggle, setToggle] = useState(false);
+  const [switchText, setSwitchTest] = useState("Switch to Digital")
+  const handleToggle = () => {
+    setToggle(!toggle)
+   
+    if (!toggle) {
+      setSwitchTest("Switch to Analog")
+
+    } else if (toggle) {
+      setSwitchTest("Switch to Digital")
+    }
+  };
+  
+  //CommentAli
   return (
     <div id="home" style={home}>
       <Container style={container}>
         <div id="settings">
-
-          <div className="form-check form-switch" onClick={() => handleToggle()}>
+          <div className="form-check form-switch" onClick={() => handleToggle()}> 
+            <div>{switchText}</div>
             <input
+              style={{ position: "absolute", right: "10%", marginTop: "-1%", width: "3%" }}
               checked={toggle}
               className="form-check-input"
               type="checkbox"
               role="switch"
               id="flexSwitchCheckDefault"
             />
+            
+          
           </div>
-
           <button onClick={toggleNightMode} id="nightmode-btn" style={btn}>
             <img src="src/images/nightmode-btn.png" alt="" height="30" width="30" style={img} />
           </button>
+
         </div>
         <div className="homeTop">
           {toggle ? <DigitalClock /> : nightMode ? <AnalogueNightMode /> : <AnalogueClock />}
@@ -72,5 +82,4 @@ const Home = ({ nightMode, setNightMode }) => {
     </div>
   );
 };
-
 export default Home;

@@ -1,6 +1,5 @@
 import React from "react";
 import "../../../Styles/cities.css";
-
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -8,10 +7,22 @@ import Col from "react-bootstrap/Col";
 // test med useParams
 import { useParams } from "react-router-dom";
 
+ const addimg = ((value) => {
+ let rawData = fetch('./src/jsonfiles/valid-timezones.json');
+
+   return rawData.value.img;
+    });
+
+
 export const Cities = (props) => {
   let { city } = useParams();
 
   const cityData = props.cities.find((x) => x["city"] == city);
+
+ 
+
+
+
 
   return (
     <Container fluid id="city-container">
@@ -21,6 +32,7 @@ export const Cities = (props) => {
             <>
               <h1>{cityData.city}</h1>
               <h2>{cityData.timezone}</h2>
+              <img src={cityData.img} />
             </>
           )}
         </Col>
@@ -128,6 +140,7 @@ export const Mallorca = () => {
 export const Malmo = () => {
   return (
     <div>
+      {addimg(value.imgMalmö)}
       <h1>Malmö</h1>
     </div>
   );

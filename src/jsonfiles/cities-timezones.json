@@ -1,106 +1,135 @@
 [
   {
     "city": "London",
-    "timezone": "Europe/London"
+    "timezone": "Europe/London",
+    "img": "src/images/london.jpg"
+    
   },
   {
     "city": "New York",
-    "timezone": "America/New_York"
+    "timezone": "America/New_York",
+    "img": "src/images/newyork.jpg"
+
   },
   {
     "city": "Paris",
-    "timezone": "Europe/Paris"
+    "timezone": "Europe/Paris",
+    "img": "src/images/paris.jpg"
   },
   {
     "city": "Tokyo",
-    "timezone": "Asia/Tokyo"
+    "timezone": "Asia/Tokyo",
+     "img": "src/images/tokyo.jpg"
   },
   {
     "city": "Sydney",
-    "timezone": "Australia/Sydney"
+    "timezone": "Australia/Sydney",
+     "img": "src/images/sydney.jpg"
   },
   {
     "city": "Honolulu",
-    "timezone": "Pacific/Honolulu"
+    "timezone": "Pacific/Honolulu",
+     "img": "src/images/honolulu.jpg" 
   },
   {
     "city": "Los Angeles",
-    "timezone": "America/Los_Angeles"
+    "timezone": "America/Los_Angeles",
+     "img": "src/images/losangeles.jpg"
   },
   {
     "city": "Chihuahua",
-    "timezone": "America/Chihuahua"
+    "timezone": "America/Chihuahua",
+     "img": "src/images/chihuahua.jpg"
   },
   {
     "city": "Bogotá",
-    "timezone": "America/Bogota"
+    "timezone": "America/Bogota",
+     "img": "src/images/bogota.jpg"
   },
   {
     "city": "Detroit",
-    "timezone": "America/Detroit"
+    "timezone": "America/Detroit",
+     "img": "src/images/detroit.jpg"
   },
   {
     "city": "Jerusalem",
-    "timezone": "Asia/Jerusalem"
+    "timezone": "Asia/Jerusalem",
+     "img": "src/images/jerusalem.jpg"
   },
   {
     "city": "Lissabon",
-    "timezone": "Europe/Lisbon"
+    "timezone": "Europe/Lisbon",
+     "img": "src/images/lissabon.jpg"
   },
   {
     "city": "Malmö",
-    "timezone": "Europe/Stockholm"
+    "timezone": "Europe/Stockholm",
+    "img": "src/images/malmo.jpg"
   },
   {
     "city": "Rom",
-    "timezone": "Europe/Rome"
+    "timezone": "Europe/Rome",
+     "img": "src/images/rom.jpg"
   },
   {
     "city": "Amsterdam",
-    "timezone": "Europe/Amsterdam"
+    "timezone": "Europe/Amsterdam",
+     "img": "src/images/amsterdam.jpg"
+  
   },
   {
     "city": "Prag",
-    "timezone": "Europe/Prague"
+    "timezone": "Europe/Prague",
+     "img": "src/images/prag.jpg"
   },
   {
     "city": "Moskva",
-    "timezone": "Europe/Moscow"
+    "timezone": "Europe/Moscow",
+     "img": "src/images/moskva.jpg"
   },
   {
     "city": "Dubai",
-    "timezone": "Asia/Dubai"
+    "timezone": "Asia/Dubai",
+     "img": "src/images/dubai.jpg"
   },
   {
     "city": "New Delhi",
-    "timezone": "Asia/Kolkata"
+    "timezone": "Asia/Kolkata",
+     "img": "src/images/newdelhi.jpg"
   },
   {
     "city": "Bangkok",
-    "timezone": "Asia/Bangkok"
+    "timezone": "Asia/Bangkok",
+     "img": "src/images/bangkok.jpg"
   },
   {
     "city": "Jakarta",
-    "timezone": "Asia/Jakarta"
+    "timezone": "Asia/Jakarta",
+     "img": "src/images/jakarta.jpg"
   },
   {
     "city": "Hongkong",
-    "timezone": "Asia/Hong_Kong"
+    "timezone": "Asia/Hong_Kong",
+     "img": "src/images/hongkong.jpg"
   },
   {
     "city": "Shanghai",
-    "timezone": "Asia/Shanghai"
+    "timezone": "Asia/Shanghai",
+     "img": "src/images/shanghai.jpg"
   },
   {
     "city": "Brisbane",
-    "timezone": "Australia/Brisbane"
+    "timezone": "Australia/Brisbane",
+     "img": "src/images/brisbane.jpg"
   },
   {
     "city": "Fiji",
-    "timezone": "Pacific/Fiji"
+    "timezone": "Pacific/Fiji",
+     "img": "src/images/fiji.jpg"
   },
   {
     "city": "Auckland",
-    "timezone": "Pacific/Auckland"
+    "timezone": "Pacific/Auckland",
+     "img": "src/images/auckland.jpg"
   }
 ]

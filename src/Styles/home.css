@@ -43,6 +43,7 @@
   font-family: "Readex Pro", sans-serif;
 }
 
+
 #home {
   background-image: url("/src/images/sky4.jpg");
   background-repeat: no-repeat;
@@ -53,4 +54,7 @@
 
 .container {
   background-color: rgba(238, 238, 238, 0.4);
+  margin-top: 1.5%;
+  border-radius: 5px;
+  margin-bottom: 1.5%;
 }

@@ -28,14 +28,16 @@
   margin-bottom: 0;
   font-family: "praise", cursive;
 }
-#city-col h2 {
-  font-size: 30px;
+
+#TimeZone {
+  font-size: 20px;
 }
+
 #city-col p {
   font-family: "Readex Pro", sans-serif;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   #city-row {
     max-width: 100%;
     background-color: initial;
@@ -49,8 +51,25 @@
   p {
     font-size-adjust: unset;
   }
+
+  .digitalClock h2 {
+    font-size: 10px;
+    color: white;
+    padding-top: 10%;
+    letter-spacing: 10px;
+    margin: 0;
+    text-align: center;
+    margin-left: -80px;
+  }
+
+  #city-col h1 {
+    font-size: 70px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-family: "praise", cursive;
+  }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 900px) {
   #city-row {
     max-width: 75%;
     background-color: initial;
@@ -58,5 +77,31 @@
   #city-col {
     max-width: 75%;
     background-color: initial;
+  }
+  .digitalClock h2 {
+    font-size: 50px;
+    color: white;
+    padding-top: 10%;
+    letter-spacing: 10px;
+    margin: 0;
+    text-align: center;
+    margin-left: -40px;
+  }
+}
+@media screen and (min-width: 820px - 900px) {
+  #city-row {
+    max-width: 75%;
+    background-color: initial;
+  }
+  #city-col {
+    max-width: 75%;
+    background-color: initial;
+  }
+  .digitalClock h2 {
+    font-size: 40px;
+    color: white;
+    padding-top: 10%;
+    letter-spacing: 10px;
+    margin: 0;
   }
 }

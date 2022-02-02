@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../Styles/cities.css";
-import { useParams } from "react-router-dom";
+
 import DigitalClock from "../../DigitalClock";
 import "../../../Styles/DetailViewCities.css";
 

@@ -28,12 +28,11 @@ export const Cities = (props) => {
         <Col id="city-col">
           {cityData && (
             <>
-              <h1>{cityData.city}</h1>
-              <h2>{cityData.timezone}</h2>
-              <img src={cityData.img} />
+              
               <h1>{cityData.city.replace("_", " ")}</h1>
               <DigitalClock timezone={cityData.timezone} />
               <h2 id="TimeZone">{cityData.timezone.replace("_", " ")}</h2>
+              <img src={cityData.img} />
 
               {cityData.info && <p>{cityData.info}</p>}
             </>

@@ -54,7 +54,6 @@ async function getTime1() {
   if (response.status === 200) {
     const time = await response.json();
     city1Time = time.datetime;
-    // console.log(city1Time);
   } else {
     throw new Error("Unable to fetch data");
   }
@@ -68,7 +67,6 @@ async function getTime2() {
   if (response.status === 200) {
     const time = await response.json();
     city2Time = time.datetime;
-    // console.log(city2Time);
   } else {
     throw new Error("Unable to fetch data");
   }
@@ -82,7 +80,6 @@ async function getTime3() {
   if (response.status === 200) {
     const time = await response.json();
     city3Time = time.datetime;
-    // console.log(city3Time);
   } else {
     throw new Error("Unable to fetch data");
   }
@@ -96,7 +93,6 @@ async function getTime4() {
   if (response.status === 200) {
     const time = await response.json();
     city4Time = time.datetime;
-    //console.log(city4Time);
   } else {
     throw new Error("Unable to fetch data");
   }
@@ -110,7 +106,6 @@ async function getTime5() {
   if (response.status === 200) {
     const time = await response.json();
     city5Time = time.datetime;
-    // console.log(city5Time);
   } else {
     throw new Error("Unable to fetch data");
   }

@@ -26,9 +26,7 @@ export default function AnalogueClock() {
         <div id="minute-hand"></div>
         <div id="second-hand"></div>
         <div id="dot"></div>
-        {/* <div id="v-line"></div>
-            <div id="h-line"></div> */}
-
+       
         <div id="dot-1" className="dot"></div>
         <div id="dot-2" className="dot"></div>
         <div id="dot-3" className="dot"></div>

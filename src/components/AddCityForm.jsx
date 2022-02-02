@@ -36,7 +36,6 @@ const AddCityForm = () => {
   const [formValues, setFormValues] = useStates({ ...emptyFormValues });
 
   const [alreadyExists, setAlreadyExists] = useState(false);
-  const [invalidCity, setInvalidCity] = useState(false);
 
   let { city, timezone } = formValues;
   const [timeZones, setTimezones] = useStates(() => {

@@ -15,7 +15,7 @@ export default function CityAdded() {
     return <Container>
         <Row>
             <Col>
-                <p>{storedCities[storedCities.length - 1].city} har lagts till! För att se se alla dina städer, gå till <Link to="/MinaStader">Mina Städer</Link></p>
+                <p>{storedCities[storedCities.length - 1]?.city} har lagts till! För att se se alla dina städer, gå till <Link to="/MinaStader">Mina Städer</Link></p>
             </Col>
         </Row>
     </Container>

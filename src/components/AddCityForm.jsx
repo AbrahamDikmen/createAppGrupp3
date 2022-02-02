@@ -101,21 +101,17 @@ const AddCityForm = () => {
     // If there is an mach, store the city into the localStorage
 
     const jsonSearch = jsonfiles.find(
-      (item) => item.city === formValues.city
+      (item) => item.city.toUpperCase() === formValues.city.toUpperCase()
     );
 
     const localSearch = JSON.parse(localStorage.storedCities).find(
-      (i) => i.city === formValues.city
+      (i) => i.city.toUpperCase() === formValues.city.toUpperCase()
     );
 
-    console.log(jsonSearch + ' ' + localSearch);
     if (jsonSearch || localSearch) {
-      console.log('alreadyExists');
       setAlreadyExists(true);
-      console.log(alreadyExists);
       return false;
     }
-
 
     let { city, timezone } = formValues;
     console.log(formValues);

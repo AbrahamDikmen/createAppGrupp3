@@ -62,11 +62,7 @@
   {
     "city": "Malmö",
     "timezone": "Europe/Stockholm",
-<<<<<<< HEAD
-    "imgMalmo": "https://media.istockphoto.com/photos/vastra-hamnen-at-sunset-picture-id502666681?s=612x612"
-=======
     "info": "Malmö är Sveriges tredje största tätort och Nordens sjätte största med 316 588 invånare i tätorten samt även länet Skånes residensstad. Malmö, som är en kommunöverskridande tätort, är huvudsakligen belägen i Malmö kommun i Skåne län, men även innefattande Arlöv i Burlövs kommun och en mindre del i Lomma kommun."
->>>>>>> 5d9e6e21bd35919f47df3f4d6c9117d801cd384d
   },
   {
     "city": "Rom",

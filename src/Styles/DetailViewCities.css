@@ -50,6 +50,13 @@
   margin-top: 10%;
 }
 
+.randomCityImg {
+  height: 100%;
+  width: 40%;
+  border-radius: 5px;
+  margin-top: 10%;
+}
+
 @media screen and (max-width: 700px) {
   #city-row {
     max-width: 100%;
@@ -81,7 +88,8 @@
     margin-bottom: 0;
     font-family: "praise", cursive;
   }
-  #cityImg {
+  #cityImg,
+  .randomCityImg {
     height: 100%;
     width: 50%;
     border-radius: 5px;
@@ -111,7 +119,8 @@
     margin: 0;
     text-align: center;
   }
-  #cityImg {
+  #cityImg,
+  .randomCityImg {
     width: 120%;
     border-radius: 5px;
     margin-left: -10%;

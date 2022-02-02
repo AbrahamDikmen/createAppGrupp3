@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../Styles/cities.css";
-
+import { useParams } from "react-router-dom";
 import DigitalClock from "../../DigitalClock";
 import "../../../Styles/DetailViewCities.css";
 
@@ -9,10 +9,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 // test med useParams
-import { useParams } from "react-router-dom";
+//import { useParams } from "react-router-dom";
 
 const addimg = (value) => {
-  let rawData = fetch("./src/jsonfiles/valid-timezones.json");
+  let rawData = fetch("../../../jsonfiles/cities-timezones.json");
 
   return rawData.value.img;
 };
@@ -28,12 +28,10 @@ export const Cities = (props) => {
         <Col id="city-col">
           {cityData && (
             <>
-              <h1>{cityData.city}</h1>
-              <h2>{cityData.timezone}</h2>
-              <img src={cityData.img} />
               <h1>{cityData.city.replace("_", " ")}</h1>
               <DigitalClock timezone={cityData.timezone} />
               <h2 id="TimeZone">{cityData.timezone.replace("_", " ")}</h2>
+              <img src={cityData.img} />
 
               {cityData.info && <p>{cityData.info}</p>}
             </>

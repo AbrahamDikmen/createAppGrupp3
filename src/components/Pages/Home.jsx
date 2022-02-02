@@ -6,30 +6,28 @@ import AnalogueNightMode from "../AnalogueNightMode";
 import Time from "../Time";
 import CityList from "../CityList";
 import DigitalClock from "../DigitalClock";
-import Container from 'react-bootstrap/Container';
+import Container from "react-bootstrap/Container";
 
 const Home = ({ nightMode, setNightMode }) => {
   const [toggle, setToggle] = useState(false);
-
 
   let nightModeStyle = {};
 
   if (nightMode) {
     nightModeStyle.img = {
-      filter: 'initial'
-    }
+      filter: "initial",
+    };
     nightModeStyle.btn = {
-      backgroundColor: 'white'
-    }
+      backgroundColor: "white",
+    };
     nightModeStyle.home = {
-      backgroundImage: 'url(/src/images/space.jpg)',
-      backgroundSize: 'cover'
-    }
+      backgroundImage: "url(/src/images/space.jpg)",
+      backgroundSize: "cover",
+    };
     nightModeStyle.container = {
-      backgroundColor: 'rgba(100, 100, 100, 0.4)'
-    }
+      backgroundColor: "rgba(100, 100, 100, 0.4)",
+    };
   }
-
 
   const handleToggle = () => {
     setToggle(!toggle);
@@ -37,7 +35,7 @@ const Home = ({ nightMode, setNightMode }) => {
 
   const toggleNightMode = () => {
     setNightMode(!nightMode);
-  }
+  };
 
   let { img, btn, home, container } = nightModeStyle;
 
@@ -46,8 +44,10 @@ const Home = ({ nightMode, setNightMode }) => {
     <div id="home" style={home}>
       <Container style={container}>
         <div id="settings">
-
-          <div className="form-check form-switch" onClick={() => handleToggle()}>
+          <div
+            className="form-check form-switch"
+            onClick={() => handleToggle()}
+          >
             <input
               checked={toggle}
               className="form-check-input"
@@ -58,11 +58,23 @@ const Home = ({ nightMode, setNightMode }) => {
           </div>
 
           <button onClick={toggleNightMode} id="nightmode-btn" style={btn}>
-            <img src="src/images/nightmode-btn.png" alt="" height="30" width="30" style={img} />
+            <img
+              src="src/images/nightmode-btn.png"
+              alt=""
+              height="30"
+              width="30"
+              style={img}
+            />
           </button>
         </div>
         <div className="homeTop">
-          {toggle ? <DigitalClock /> : nightMode ? <AnalogueNightMode /> : <AnalogueClock />}
+          {toggle ? (
+            <DigitalClock />
+          ) : nightMode ? (
+            <AnalogueNightMode />
+          ) : (
+            <AnalogueClock />
+          )}
           <GetGeo />
           <Time />
         </div>

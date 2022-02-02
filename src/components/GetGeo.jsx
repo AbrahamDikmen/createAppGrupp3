@@ -14,20 +14,21 @@ const GetGeo = () => {
 
   useEffect(() => {
     getUserGeolocationDetails();
-    const timer = setInterval(() => { setTimeString(new Date().toLocaleTimeString()) }, 1000);
-    return function cleanup() { clearInterval(timer); }
+    const timer = setInterval(() => {
+      setTimeString(new Date().toLocaleTimeString());
+    }, 1000);
+    return function cleanup() {
+      clearInterval(timer);
+    };
   }, []);
 
   return (
     <div id="geo">
       <div className="geo-container">
-
         {details && (
           <ul className="list-group">
             <p>
-              <li className="list-group-item">
-                {`${details.city}, ${details.country_name}(${details.country_code})`}
-              </li>
+              {`${details.city} ${details.country_name}(${details.country_code})`}
             </p>
           </ul>
         )}

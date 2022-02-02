@@ -9,39 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/footer";
 import "./Styles/main.scss";
 
-/*City imports */
-import {
-  London,
-  New_York,
-  Paris,
-  Tokyo,
-  Sydney,
-  Honolulu,
-  LosAngeles,
-  Chihuahua,
-  Bogota,
-  Detroit,
-  Jerusalem,
-  Lissabon,
-  Malmo,
-  Rom,
-  Amsterdam,
-  Prag,
-  Moskva,
-  Dubai,
-  NewDelhi,
-  Bangkok,
-  Jakarta,
-  Hongkong,
-  Shanghai,
-  Brisbane,
-  Fiji,
-  Auckland,
- 
-} from "./components/Pages/cities/Cities";
 import { Cities } from "./components/Pages/cities/Cities";
-
-import AnalogueClock from "./components/AnalogueClock";
 
 export default function App() {
   const [cities, setCities] = useState([]);
@@ -85,26 +53,6 @@ export default function App() {
 
         {/*City Routes*/}
         <Route path="/:city" element={<Cities cities={cities} />} />
-        {/* <Route path="/Amsterdam" element={<Amsterdam />} />
-        <Route path="/Barcelona" element={<Barcelona />} />
-        <Route path="/Bergen" element={<Bergen />} />
-        <Route path="/Bogota" element={<Bogota />} />
-        <Route path="/CapeTown" element={<CapeTown />} />
-        <Route path="/Dubai" element={<Dubai />} />
-        <Route path="/Los Angeles" element={<LosAngeles />} />
-        <Route path="/Houston" element={<Houston />} />
-        <Route path="/Istanbul" element={<Istanbul />} />
-        <Route path="/Jerusalem" element={<Jerusalem />} />
-        <Route path="/Buenos Aires" element={<BuenosAires />} />
-        <Route path="/Mallorca" element={<Mallorca />} />
-        <Route path="/Malmo" element={<Malmo />} />
-        <Route path="/Miami" element={<Miami />} />
-        <Route path="/Moskva " element={<Moskva />} />
-        <Route path="/NewDelhi" element={<NewDelhi />} />
-        <Route path="/RiodeJaneiro" element={<RiodeJaneiro />} />
-        <Route path="/Shangha" element={<Shanghai />} />
-        <Route path="/Tokyo" element={<Tokyo />} />
-        <Route path="/Venice" element={<Venice />} /> */}
       </Routes>{" "}
       <Footer />
     </Router>

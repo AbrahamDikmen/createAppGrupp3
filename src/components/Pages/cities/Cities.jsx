@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import DigitalClock from '../../DigitalClock';
+import DigitalClock from "../../DigitalClock";
 import "../../../Styles/cities.css";
 
 import Container from "react-bootstrap/Container";
@@ -18,22 +18,18 @@ export const Cities = (props) => {
         <Col id="city-col">
           {cityData && (
             <>
-               <DigitalClock timezone={cityData.timezone} />
-              <h1>{cityData.city.replace('_', ' ')}</h1>
-              <h2>{cityData.timezone.replace('_', ' ')}</h2>
-          
-              { cityData.info && (
-                <p>{cityData.info}</p>
-                )}
+              <DigitalClock timezone={cityData.timezone} />
+              <h1>{cityData.city.replace("_", " ")}</h1>
+              <h2>{cityData.timezone.replace("_", " ")}</h2>
+
+              {cityData.info && <p>{cityData.info}</p>}
             </>
           )}
-       
         </Col>
       </Row>
     </Container>
   );
 };
-
 
 export const London = () => {
   return (

@@ -95,7 +95,7 @@ async function getTime4() {
   if (response.status === 200) {
     const time = await response.json();
     city4Time = time.datetime;
-    // console.log(city4Time);
+    //console.log(city4Time);
   } else {
     throw new Error("Unable to fetch data");
   }
@@ -148,29 +148,39 @@ function Time() {
       <Container className="clock-box">
         <Row>
           <Col className="small-clock">
-            <h3>{city1}</h3>
-            <h3>{`${time1.substring(11, 19)}`}</h3>
-            <h6>{`${time1.substring(26, 32)}`}</h6>
+            <a href={city1}>
+              <h3>{city1}</h3>
+              <h3>{`${time1.substring(11, 19)}`}</h3>
+              <h6>{`${time1.substring(26, 32)}`}</h6>
+            </a>
           </Col>
           <Col className="small-clock">
-            <h3>{city2}</h3>
-            <h3>{`${time2.substring(11, 19)}`}</h3>
-            <h6>{`${time2.substring(26, 32)}`}</h6>
+            <a href={city2}>
+              <h3>{city2}</h3>
+              <h3>{`${time2.substring(11, 19)}`}</h3>
+              <h6>{`${time2.substring(26, 32)}`}</h6>
+            </a>
           </Col>
           <Col className="small-clock">
-            <h3>{city3}</h3>
-            <h3>{`${time3.substring(11, 19)}`}</h3>
-            <h6>{`${time3.substring(26, 32)}`}</h6>
+            <a href={city3}>
+              <h3>{city3}</h3>
+              <h3>{`${time3.substring(11, 19)}`}</h3>
+              <h6>{`${time3.substring(26, 32)}`}</h6>
+            </a>
           </Col>
           <Col className="small-clock">
-            <h3>{city4}</h3>
-            <h3>{`${time4.substring(11, 19)}`}</h3>
-            <h6>{`${time4.substring(26, 32)}`}</h6>
+            <a href={city4}>
+              <h3>{city4}</h3>
+              <h3>{`${time4.substring(11, 19)}`}</h3>
+              <h6>{`${time4.substring(26, 32)}`}</h6>
+            </a>
           </Col>
           <Col className="small-clock">
-            <h3>{city5}</h3>
-            <h3>{`${time5.substring(11, 19)}`}</h3>
-            <h6>{`${time5.substring(26, 32)}`}</h6>
+            <a href={city5}>
+              <h3>{city5}</h3>
+              <h3>{`${time5.substring(11, 19)}`}</h3>
+              <h6>{`${time5.substring(26, 32)}`}</h6>
+            </a>
           </Col>
         </Row>
       </Container>

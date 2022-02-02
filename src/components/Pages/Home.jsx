@@ -35,14 +35,14 @@ const Home = ({ nightMode, setNightMode }) => {
 
   //CommentAli
   const [toggle, setToggle] = useState(false);
-  const [switchText, setSwitchTest] = useState("Switch to Digital");
+  const [switchText, setSwitchTest] = useState(<h6>Switch to Digital</h6>);
   const handleToggle = () => {
     setToggle(!toggle);
 
     if (!toggle) {
-      setSwitchTest("Switch to Analog");
+      setSwitchTest(<h6>Switch to Analog</h6>);
     } else if (toggle) {
-      setSwitchTest("Switch to Digital");
+      setSwitchTest(<h6>Switch to Digital</h6>);
     }
   };
 
@@ -51,24 +51,21 @@ const Home = ({ nightMode, setNightMode }) => {
     <div id="home" style={home}>
       <Container style={container}>
         <div id="settings">
+          <div className="toggle">{switchText}</div>
           <div
             className="form-check form-switch"
             onClick={() => handleToggle()}
           >
-            <div>{switchText}</div>
             <input
-              style={{
-                position: "absolute",
-                right: "10%",
-                marginTop: "-1%",
-                width: "3%",
-              }}
+              height="30"
+              width="30"
               checked={toggle}
               className="form-check-input"
               type="checkbox"
               role="switch"
               id="flexSwitchCheckDefault"
             />
+
           </div>
           <button onClick={toggleNightMode} id="nightmode-btn" style={btn}>
             <img

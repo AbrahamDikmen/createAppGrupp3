@@ -57,11 +57,9 @@
 @media screen and (max-width: 700px) {
   #city-row {
     max-width: 100%;
-    background-color: initial;
   }
   #city-col {
     max-width: 100%;
-    background-color: initial;
   }
   #city-col h1,
   h2,
@@ -99,11 +97,11 @@
 }
 @media screen and (max-width: 900px) {
   #city-row {
-    max-width: 75%;
-    background-color: initial;
+    max-width: 100%;
+    background-color: #0b2955;
   }
   #city-col {
-    max-width: 75%;
+    max-width: 85%;
     background-color: initial;
   }
 

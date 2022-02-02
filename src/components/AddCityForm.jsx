@@ -143,9 +143,7 @@ const AddCityForm = () => {
         {alreadyExists && (
           <p style={{ color: "yellow" }}>⚠ Staden finns redan i dina städer.</p>
         )}
-        {invalidCity && (
-          <p style={{ color: "#FF0000" }}>⚠ Ogiltig stad, försök igen...</p>
-        )}
+        
 
         <input
           type="text"

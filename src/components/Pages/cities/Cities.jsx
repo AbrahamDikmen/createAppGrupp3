@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../Styles/cities.css";
+
 import { useParams } from "react-router-dom";
 import DigitalClock from "../../DigitalClock";
 import "../../../Styles/DetailViewCities.css";
@@ -8,7 +8,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import GetPhoto from "../../GetPhoto";
 
-export const Cities = (props, { data }) => {
+export const Cities = (props) => {
   let { city } = useParams();
 
   const cityData = props.cities.find((x) => x["city"] == city);

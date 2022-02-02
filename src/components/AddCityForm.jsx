@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Styles/addCityForm.css";
 import jsonfiles from "../jsonfiles/cities-timezones.json";
+
 // Custom hook, accepts an object corresponding to the 'initialState' input parameter.
 const useStates = (initialState = {}) => {
   let [states, setStates] = useState(initialState);
@@ -114,7 +115,6 @@ const AddCityForm = () => {
     }
 
     let { city, timezone } = formValues;
-    console.log(formValues);
     city = city[0].toUpperCase() + city.slice(1, city.length);
     console.log(city);
     storedCities.push({ city: city, timezone: timezone });

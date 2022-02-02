@@ -4,14 +4,15 @@ import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 
 export default function CityAdded() {
+    // fetching locally stored cities from utility function did not return 
+    // the updated data, it must therefore be fetched directly from component
     let storedCities;
     try {
         storedCities = JSON.parse(localStorage.storedCities);
     } catch (error) {
         storedCities = [];
     }
-    // 
-    console.log(storedCities);
+
     return <Container>
         <Row>
             <Col>

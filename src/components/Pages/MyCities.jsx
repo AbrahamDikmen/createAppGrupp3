@@ -9,7 +9,17 @@ export default function MyCities({ cities }) {
   Renders a component containing links for the given list of cities.
   The links reroutes to a detailed view for that city.
   */
-  const [storedCities, setCities] = useState(cities);
+
+  // fetching locally stored cities from utility function did not return 
+  // the updated data, it must therefore be fetched directly from component
+  let localCities;
+  try {
+    localCities = JSON.parse(localStorage.storedCities);
+  } catch (error) {
+    localCities = [];
+  }
+
+  const [storedCities, setCities] = useState(localCities);
   const [showModal, setShowModal] = useState(false);
 
   // A function that filters the storedCities state variable on the 

@@ -52,7 +52,7 @@ export default function App() {
         />
         <Route path="/NyStad" element={<CityAdded />} />
         {/*City Routes*/}
-        <Route path="/city" element={<Cities cities={cities} />} />
+        <Route path="/:city" element={<Cities cities={cities} />} />
       </Routes>{" "}
       <Footer />
     </Router>

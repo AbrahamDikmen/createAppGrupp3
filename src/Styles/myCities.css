@@ -91,6 +91,9 @@
 }
 
 @media screen and (max-width: 1100px) {
+  .cities-container {
+    padding-top: 0%;
+  }
   .cities-outer-wrapper {
     max-width: 75%;
   }

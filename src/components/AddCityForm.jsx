@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../Styles/addCityForm.css";
 
 // Custom hook, accepts an object corresponding to the 'initialState' input parameter.
@@ -22,7 +23,7 @@ async function getTimezones() {
 
 const AddCityForm = () => {
 
-
+  let navigate = useNavigate()
 
   // Initialize values for an empty form.
   let emptyFormValues = {
@@ -43,7 +44,7 @@ const AddCityForm = () => {
     });
     return timezones;
   })
-  console.log(timeZones);
+
   // A function that is called when the form is updated, sets values for the
   // formValues state variable
   const updateFormValue = (event) => {
@@ -57,6 +58,8 @@ const AddCityForm = () => {
     event.preventDefault();
     writeToLocalStorage();
     resetForm();
+
+    navigate('/NyStad');
   };
 
   // A function that sets the formValues state variable to the values of
@@ -83,7 +86,11 @@ const AddCityForm = () => {
   // to the storedCities array, then assigns localStorage.storedCities
   // a stringified JSON version of the storeCities.
   const writeToLocalStorage = () => {
-    storedCities.push(formValues);
+
+    let { city, timezone } = formValues;
+    city = city[0].toUpperCase() + city.slice(1, city.length);
+
+    storedCities.push({ city: city, timezone: timezone });
     localStorage.storedCities = JSON.stringify(storedCities);
   };
   // decides the number of rows to be shown when clicking

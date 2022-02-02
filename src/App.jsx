@@ -37,11 +37,12 @@ import {
   Brisbane,
   Fiji,
   Auckland,
- 
+
 } from "./components/Pages/cities/Cities";
 import { Cities } from "./components/Pages/cities/Cities";
 
 import AnalogueClock from "./components/AnalogueClock";
+import CityAdded from "./components/Pages/CityAdded";
 
 export default function App() {
   const [cities, setCities] = useState([]);
@@ -82,7 +83,7 @@ export default function App() {
           path="/MinaStader"
           element={<MyCities cities={readLocalStorage()} />}
         />
-
+        <Route path="/NyStad" element={<CityAdded />} />
         {/*City Routes*/}
         <Route path="/:city" element={<Cities cities={cities} />} />
         {/* <Route path="/Amsterdam" element={<Amsterdam />} />

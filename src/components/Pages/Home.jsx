@@ -11,7 +11,6 @@ import Container from 'react-bootstrap/Container';
 const Home = ({ nightMode, setNightMode }) => {
   const [toggle, setToggle] = useState(false);
 
-
   let nightModeStyle = {};
 
   if (nightMode) {

@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from "react";
 import '../../Styles/myCities.css';
 import { Link } from 'react-router-dom';
+import Modal from '../Modal';
 
 export default function MyCities({ cities }) {
   /*
@@ -9,6 +10,7 @@ export default function MyCities({ cities }) {
   The links reroutes to a detailed view for that city.
   */
   const [storedCities, setCities] = useState(cities);
+  const [showModal, setShowModal] = useState(false);
 
   // A function that filters the storedCities state variable on the 
   // given index.Then sets the localStorage.storedCities to the 
@@ -23,18 +25,26 @@ export default function MyCities({ cities }) {
     setCities(filteredCities);
   }
 
-  // A function that prompts the user to confirm whether or not to remove the locally
-  // stored list of cities. If 'ok' is given the localStorage.clear() function is called
-  const promptLocalStorageClear = () => {
-    let userChoice = confirm('Alla dina tillagda städer kommer att tas bort.\nVill du fortsätta?');
+  // A function removes the locally stored list of cities if given parameter 
+  // is true. Sets the showModal state variable to false.
+  const localStorageClear = (userChoice) => {
     if (userChoice) {
       localStorage.clear();
       setCities([]);
     }
+    setShowModal(false);
   }
 
   return (
     <div className="cities-container">
+      {
+        showModal &&
+        <Modal
+          message={'Alla dina tillagda städer kommer att tas bort.'}
+          question={'Vill du fortsätta?'}
+          callback={localStorageClear}
+        />
+      }
 
       <div className="cities-outer-wrapper">
 
@@ -66,7 +76,8 @@ export default function MyCities({ cities }) {
              */
             storedCities.length > 0 &&
             <div className="clear-my-cities">
-              <div onClick={() => promptLocalStorageClear()}>Rensa Mina Städer</div>
+              {/*<div onClick={() => promptLocalStorageClear()}>Rensa Mina Städer</div>*/}
+              <div onClick={() => setShowModal(true)}>Rensa Mina Städer</div>
             </div>
           }
         </div>

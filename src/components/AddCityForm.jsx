@@ -22,8 +22,7 @@ async function getTimezones() {
 }
 
 const AddCityForm = () => {
-
-  let navigate = useNavigate()
+  let navigate = useNavigate();
 
   // Initialize values for an empty form.
   let emptyFormValues = {
@@ -61,13 +60,11 @@ const AddCityForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-
     if (writeToLocalStorage()) {
-      console.log('submit processed');
+      console.log("submit processed");
       resetForm();
-      navigate('/NyStad');
+      navigate("/NyStad");
     }
-
   };
 
   // A function that sets the formValues state variable to the values of
@@ -94,8 +91,6 @@ const AddCityForm = () => {
   // to the storedCities array, then assigns localStorage.storedCities
   // a stringified JSON version of the storeCities.
   const writeToLocalStorage = () => {
-
-
     // Converting a jsonfile to code and then we loop through each city in the array
     // If there is an mach, return out of the function
     // If there is an mach, store the city into the localStorage

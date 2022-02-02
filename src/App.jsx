@@ -8,7 +8,7 @@ import NavbarOne from "./components/NavbarOne";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/footer";
 import "./Styles/main.scss";
-
+import CityAdded from "./components/Pages/CityAdded";
 import { Cities } from "./components/Pages/cities/Cities";
 
 export default function App() {
@@ -50,7 +50,7 @@ export default function App() {
           path="/MinaStader"
           element={<MyCities cities={readLocalStorage()} />}
         />
-
+        <Route path="/NyStad" element={<CityAdded />} />
         {/*City Routes*/}
         <Route path="/:city" element={<Cities cities={cities} />} />
       </Routes>{" "}

@@ -10,7 +10,8 @@ export default function CityAdded() {
     } catch (error) {
         storedCities = [];
     }
-
+    // 
+    console.log(storedCities);
     return <Container>
         <Row>
             <Col>

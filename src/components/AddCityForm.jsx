@@ -96,28 +96,24 @@ const AddCityForm = () => {
     // If there is an mach, return out of the function
     // If there is an mach, store the city into the localStorage
 
-    const inputSpellCheck = jsonfiles.find(
+    const jsonSearch = jsonfiles.find(
       (item) => item.city === formValues.city
     );
 
-    if (!inputSpellCheck) {
-      setInvalidCity(true);
-      setAlreadyExists(false);
+    const localSearch = JSON.parse(localStorage.storedCities).find(
+      (i) => i.city === formValues.city
+    );
+
+    console.log(jsonSearch + ' ' + localSearch);
+    if (!jsonSearch && localSearch) {
+      setAlreadyExists(true);
       return;
     }
 
-    const foundCity = JSON.parse(localStorage.storedCities).find(
-      (i) => i.city === formValues.city
-    );
-    if (foundCity) {
-      setAlreadyExists(true);
-      setInvalidCity(false);
-      return;
-    }
-    setInvalidCity(false);
-    setAlreadyExists(false);
     let { city, timezone } = formValues;
+    console.log(formValues);
     city = city[0].toUpperCase() + city.slice(1, city.length);
+    console.log(city);
     storedCities.push({ city: city, timezone: timezone });
     localStorage.storedCities = JSON.stringify(storedCities);
   };

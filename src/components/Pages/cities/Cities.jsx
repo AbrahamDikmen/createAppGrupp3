@@ -1,12 +1,11 @@
 import React from "react";
-import "../../../Styles/cities.css";
+
 import { useParams } from "react-router-dom";
 import DigitalClock from "../../DigitalClock";
 import "../../../Styles/DetailViewCities.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
 
 export const Cities = (props) => {
   let { city } = useParams();
@@ -31,5 +30,3 @@ export const Cities = (props) => {
     </Container>
   );
 };
-
-

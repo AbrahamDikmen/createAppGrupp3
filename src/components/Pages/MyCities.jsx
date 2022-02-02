@@ -87,7 +87,6 @@ export default function MyCities({ cities }) {
              */
             storedCities.length > 0 &&
             <div className="clear-my-cities">
-              {/*<div onClick={() => promptLocalStorageClear()}>Rensa Mina Städer</div>*/}
               <div onClick={() => setShowModal(true)}>Rensa Mina Städer</div>
             </div>
           }

@@ -35,7 +35,6 @@ const AddCityForm = () => {
   const [formValues, setFormValues] = useStates({ ...emptyFormValues });
 
   const [alreadyExists, setAlreadyExists] = useState(false);
-  const [invalidCity, setInvalidCity] = useState(false);
 
   let { city, timezone } = formValues;
   const [timeZones, setTimezones] = useStates(() => {
@@ -139,9 +138,7 @@ const AddCityForm = () => {
         {alreadyExists && (
           <p style={{ color: "yellow" }}>⚠ Staden finns redan i dina städer.</p>
         )}
-        {invalidCity && (
-          <p style={{ color: "#FF0000" }}>⚠ Ogiltig stad, försök igen...</p>
-        )}
+        
 
         <input
           type="text"

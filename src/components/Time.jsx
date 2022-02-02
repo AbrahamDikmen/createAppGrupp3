@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Loader from '../components/Loader';
 import "../Styles/Time.css";
 
 let city1 = "London";
@@ -124,18 +125,22 @@ function Time() {
   const [time4, setTime4] = useState("");
   const [time5, setTime5] = useState("");
 
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    const timer = setInterval(() => {
-      getTime1();
-      getTime2();
-      getTime3();
-      getTime4();
-      getTime5();
+    const timer = setInterval(async () => {
+      await getTime1();
+      await getTime2();
+      await getTime3();
+      await getTime4();
+      await getTime5();
       setTime1(city1Time);
       setTime2(city2Time);
       setTime3(city3Time);
       setTime4(city4Time);
       setTime5(city5Time);
+
+      setIsLoading(false);
     }, 1000);
 
     return function cleanup() {
@@ -150,6 +155,7 @@ function Time() {
           <Col className="small-clock">
             <a href={city1}>
               <h3>{city1}</h3>
+              {isLoading && <Loader />}
               <h3>{`${time1.substring(11, 19)}`}</h3>
               <h6>{`${time1.substring(26, 32)}`}</h6>
             </a>
@@ -157,6 +163,7 @@ function Time() {
           <Col className="small-clock">
             <a href={city2}>
               <h3>{city2}</h3>
+              {isLoading && <Loader />}
               <h3>{`${time2.substring(11, 19)}`}</h3>
               <h6>{`${time2.substring(26, 32)}`}</h6>
             </a>
@@ -164,6 +171,7 @@ function Time() {
           <Col className="small-clock">
             <a href={city3}>
               <h3>{city3}</h3>
+              {isLoading && <Loader />}
               <h3>{`${time3.substring(11, 19)}`}</h3>
               <h6>{`${time3.substring(26, 32)}`}</h6>
             </a>
@@ -171,6 +179,7 @@ function Time() {
           <Col className="small-clock">
             <a href={city4}>
               <h3>{city4}</h3>
+              {isLoading && <Loader />}
               <h3>{`${time4.substring(11, 19)}`}</h3>
               <h6>{`${time4.substring(26, 32)}`}</h6>
             </a>
@@ -178,6 +187,7 @@ function Time() {
           <Col className="small-clock">
             <a href={city5}>
               <h3>{city5}</h3>
+              {isLoading && <Loader />}
               <h3>{`${time5.substring(11, 19)}`}</h3>
               <h6>{`${time5.substring(26, 32)}`}</h6>
             </a>

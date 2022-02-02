@@ -21,6 +21,8 @@
   max-width: 75%;
   padding-bottom: 18%;
   text-align: center;
+  margin-bottom: 5%;
+  border-radius: 5px;
 }
 #city-col h1 {
   font-size: 100px;
@@ -35,6 +37,17 @@
 
 #city-col p {
   font-family: "Readex Pro", sans-serif;
+  margin-left: 55%;
+  height: auto;
+  width: 40%;
+  margin-top: -40%;
+}
+#cityImg {
+  height: 100%;
+  width: 40%;
+  border-radius: 5px;
+  margin-left: -40%;
+  margin-top: 10%;
 }
 
 @media screen and (max-width: 700px) {
@@ -68,6 +81,17 @@
     margin-bottom: 0;
     font-family: "praise", cursive;
   }
+  #cityImg {
+    height: 100%;
+    width: 50%;
+    border-radius: 5px;
+  }
+  #city-col p {
+    font-family: "Readex Pro", sans-serif;
+    height: auto;
+    width: 70%;
+    margin-top: 0%;
+  }
 }
 @media screen and (max-width: 900px) {
   #city-row {
@@ -78,6 +102,7 @@
     max-width: 75%;
     background-color: initial;
   }
+
   .digitalClock h2 {
     font-size: 50px;
     color: white;
@@ -85,23 +110,17 @@
     letter-spacing: 10px;
     margin: 0;
     text-align: center;
-    margin-left: -40px;
   }
-}
-@media screen and (min-width: 820px - 900px) {
-  #city-row {
-    max-width: 75%;
-    background-color: initial;
+  #cityImg {
+    width: 120%;
+    border-radius: 5px;
+    margin-left: -10%;
   }
-  #city-col {
-    max-width: 75%;
-    background-color: initial;
-  }
-  .digitalClock h2 {
-    font-size: 40px;
-    color: white;
-    padding-top: 10%;
-    letter-spacing: 10px;
-    margin: 0;
+  #city-col p {
+    font-family: "Readex Pro", sans-serif;
+    margin-left: -10%;
+    height: auto;
+    width: 120%;
+    margin-top: 10%;
   }
 }

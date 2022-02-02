@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../Styles/addCityForm.css";
-
+import jsonfiles from "../jsonfiles/cities-timezones.json";
 // Custom hook, accepts an object corresponding to the 'initialState' input parameter.
 const useStates = (initialState = {}) => {
   let [states, setStates] = useState(initialState);
@@ -13,25 +14,29 @@ const useStates = (initialState = {}) => {
   ];
 };
 
-
 async function getTimezones() {
-  let rawData = await fetch('./src/jsonfiles/valid-timezones.json');
+  let rawData = await fetch("./src/jsonfiles/valid-timezones.json");
   let timezones = await rawData.json();
   return timezones;
 }
 
 const AddCityForm = () => {
 
-
+  let navigate = useNavigate()
 
   // Initialize values for an empty form.
   let emptyFormValues = {
     city: "",
     timezone: "",
+    img: "",
   };
 
   // useStates hook to hold values from the form.
   const [formValues, setFormValues] = useStates({ ...emptyFormValues });
+
+  const [alreadyExists, setAlreadyExists] = useState(false);
+  const [invalidCity, setInvalidCity] = useState(false);
+
   let { city, timezone } = formValues;
   const [timeZones, setTimezones] = useStates(() => {
     let timezones = [];
@@ -42,8 +47,8 @@ const AddCityForm = () => {
       }
     });
     return timezones;
-  })
-  console.log(timeZones);
+  });
+
   // A function that is called when the form is updated, sets values for the
   // formValues state variable
   const updateFormValue = (event) => {
@@ -57,6 +62,8 @@ const AddCityForm = () => {
     event.preventDefault();
     writeToLocalStorage();
     resetForm();
+
+    navigate('/NyStad');
   };
 
   // A function that sets the formValues state variable to the values of
@@ -65,7 +72,7 @@ const AddCityForm = () => {
     setFormValues({ ...emptyFormValues });
   };
 
-  let storedCities;
+  let storedCities = [];
 
   // A function that parses the localStorage.storedCities field, assigns
   // storedCities the read values. If an error is raised while attempting
@@ -83,9 +90,34 @@ const AddCityForm = () => {
   // to the storedCities array, then assigns localStorage.storedCities
   // a stringified JSON version of the storeCities.
   const writeToLocalStorage = () => {
-    storedCities.push(formValues);
+
+
+    // Converting a jsonfile to code and then we loop through each city in the array
+    // If there is an mach, return out of the function
+    // If there is an mach, store the city into the localStorage
+
+    const jsonSearch = jsonfiles.find(
+      (item) => item.city === formValues.city
+    );
+
+    const localSearch = JSON.parse(localStorage.storedCities).find(
+      (i) => i.city === formValues.city
+    );
+
+    console.log(jsonSearch + ' ' + localSearch);
+    if (!jsonSearch && localSearch) {
+      setAlreadyExists(true);
+      return;
+    }
+
+    let { city, timezone } = formValues;
+    console.log(formValues);
+    city = city[0].toUpperCase() + city.slice(1, city.length);
+    console.log(city);
+    storedCities.push({ city: city, timezone: timezone });
     localStorage.storedCities = JSON.stringify(storedCities);
   };
+
   // decides the number of rows to be shown when clicking
   // on dropdown by changing its size property
   const setSize = (e) => (e.target.size = 5);
@@ -99,6 +131,13 @@ const AddCityForm = () => {
 
       <form onSubmit={handleSubmit}>
         <h3>Stad</h3>
+        {alreadyExists && (
+          <p style={{ color: "yellow" }}>⚠ Staden finns redan i dina städer.</p>
+        )}
+        {invalidCity && (
+          <p style={{ color: "#FF0000" }}>⚠ Ogiltig stad, försök igen...</p>
+        )}
+
         <input
           type="text"
           name="city"

@@ -9,7 +9,6 @@ export default function MyCities({ cities }) {
   Renders a component containing links for the given list of cities.
   The links reroutes to a detailed view for that city.
   */
-
   const [storedCities, setCities] = useState(cities);
   const [showModal, setShowModal] = useState(false);
 

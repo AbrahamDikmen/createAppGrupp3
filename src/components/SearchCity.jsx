@@ -14,17 +14,18 @@ export function SearchCity({ data }) {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
 
-    //  These here give us new arrays depending on what we have been searching for
+    //  These gives us new arrays depending on what we have been searching for
 
     const newFilter = data.filter((value) => {
       return value.city.toLowerCase().includes(searchWord.toLowerCase());
     });
 
     // Cleans the search filter if there is no text in the "search box"
+
     if (searchWord === "") {
       setFilteredData([]);
     } else {
-      setFilteredData(newFilter);
+      setFilteredData(newFilter.sort((a, b) => a.city.localeCompare(b.city)));
     }
   };
 

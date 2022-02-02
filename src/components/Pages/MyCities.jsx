@@ -40,6 +40,7 @@ export default function MyCities({ cities }) {
   const localStorageClear = (userChoice) => {
     if (userChoice) {
       localStorage.clear();
+
       setCities([]);
     }
     setShowModal(false);

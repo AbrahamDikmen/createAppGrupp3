@@ -105,7 +105,13 @@ const AddCityForm = () => {
       (item) => item.city.toUpperCase() === formValues.city.toUpperCase()
     );
 
-    const localSearch = JSON.parse(localStorage.storedCities).find(
+    let storedCities;
+    try {
+      storedCities = JSON.parse(localStorage.storedCities);
+    } catch (error) {
+      storedCities = [];
+    }
+    const localSearch = storedCities.find(
       (i) => i.city.toUpperCase() === formValues.city.toUpperCase()
     );
 

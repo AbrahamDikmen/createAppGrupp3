@@ -60,10 +60,14 @@ const AddCityForm = () => {
   // to localStorage and calls function to reset the form.
   const handleSubmit = (event) => {
     event.preventDefault();
-    writeToLocalStorage();
-    resetForm();
 
-    navigate('/NyStad');
+
+    if (writeToLocalStorage()) {
+      console.log('submit processed');
+      resetForm();
+      navigate('/NyStad');
+    }
+
   };
 
   // A function that sets the formValues state variable to the values of
@@ -105,10 +109,13 @@ const AddCityForm = () => {
     );
 
     console.log(jsonSearch + ' ' + localSearch);
-    if (!jsonSearch && localSearch) {
+    if (jsonSearch || localSearch) {
+      console.log('alreadyExists');
       setAlreadyExists(true);
-      return;
+      console.log(alreadyExists);
+      return false;
     }
+
 
     let { city, timezone } = formValues;
     console.log(formValues);
@@ -116,6 +123,7 @@ const AddCityForm = () => {
     console.log(city);
     storedCities.push({ city: city, timezone: timezone });
     localStorage.storedCities = JSON.stringify(storedCities);
+    return true;
   };
 
   // decides the number of rows to be shown when clicking

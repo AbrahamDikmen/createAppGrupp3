@@ -1,34 +1,36 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { Container } from "react-bootstrap";
 
-let cityName = "fiji";
-
-async function getImage() {
-  let imageLink = "";
-  let response = await fetch(
-    `https://pixabay.com/api/?key=25521224-067cb032904da2f120a0b95e2&q=${cityName}&image_type=photo`
-  );
-
-  if (response.status === 200) {
-    const imageJson = await response.json();
-    imageLink = imageJson.hits[0].webformatURL;
-  } else {
-    throw new Error("Unable to fetch image");
-  }
-  return imageLink;
-}
-
-function showImage() {
+const GetPhoto = ({ theCity }) => {
   const [imageLink, setImageLink] = useState("");
-  useEffect(async () => {
-    setImageLink(getImage());
-  }, []);
+
+  async function getImage() {
+    let imageCity = "";
+    let response = await fetch(
+      `https://pixabay.com/api/?key=25521224-067cb032904da2f120a0b95e2&q=${theCity}&image_type=photo`
+    );
+
+    if (response.status === 200) {
+      const imageJson = await response.json();
+      imageCity =
+        imageJson?.hits[1]?.webformatURL || imageJson?.hits[0]?.webformatURL;
+    } else {
+      throw new Error("Unable to fetch image");
+    }
+
+    return setImageLink(imageCity);
+  }
+
   return (
     <>
-      <Container className="fetched-photo">
-        <img src={imageLink} alt="" />
+      <Container
+        style={{ background: "transparent" }}
+        className="fetched-photo"
+      >
+        <img className="randomCityImg" src={imageLink} onChange={getImage()} />
       </Container>
     </>
   );
-}
+};
 
-export default showImage;
+export default GetPhoto;

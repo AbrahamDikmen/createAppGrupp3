@@ -6,6 +6,7 @@ import "../../../Styles/DetailViewCities.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import GetPhoto from "../../GetPhoto";
 
 export const Cities = (props) => {
   let { city } = useParams();
@@ -31,7 +32,13 @@ export const Cities = (props) => {
               <h1>{cityData.city.replace("_", " ")}</h1>
               <DigitalClock timezone={cityData.timezone} />
               <h2 id="TimeZone">{cityData.timezone.replace("_", " ")}</h2>
-              <img id="cityImg" src={cityData.img} />
+
+              {cityData.img ? (
+                <img id="cityImg" src={cityData.img} />
+              ) : (
+                <GetPhoto theCity={city} />
+              )}
+
               {cityData.info && <p>{cityData.info}</p>}
             </>
           )}

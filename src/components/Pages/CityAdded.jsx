@@ -13,11 +13,17 @@ export default function CityAdded() {
         storedCities = [];
     }
 
-    return <Container>
-        <Row>
-            <Col>
-                <p>{storedCities[storedCities.length - 1]?.city} har lagts till! För att se se alla dina städer, gå till <Link to="/MinaStader">Mina Städer</Link></p>
-            </Col>
-        </Row>
-    </Container>
+    return <main className='background' id="addMain">
+        <Container id='addContainer'>
+            <Row className='py-3 justify-content-center' id="addRow">
+                <Col lg={8} className='text-center py-5 vertical-center' id='addCol'>
+                    <div>
+                        <p>{storedCities[storedCities.length - 1]?.city} har lagts till! För att se se alla dina städer, gå till <Link to="/MinaStader">Mina Städer</Link>.</p>
+                        <br />
+                        <p><Link to={'/' + (storedCities[storedCities.length - 1]?.city)}>Klicka här</Link> för att se vad klockan är i {storedCities[storedCities.length - 1]?.city}.</p>
+                    </div>
+                </Col>
+            </Row>
+        </Container>
+    </main>
 }

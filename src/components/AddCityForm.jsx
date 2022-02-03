@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Styles/addCityForm.css";
 import jsonfiles from "../jsonfiles/cities-timezones.json";
+import GetPhoto from "./GetPhoto";
 
 // Custom hook, accepts an object corresponding to the 'initialState' input parameter.
 const useStates = (initialState = {}) => {
@@ -22,8 +23,7 @@ async function getTimezones() {
 }
 
 const AddCityForm = () => {
-
-  let navigate = useNavigate()
+  let navigate = useNavigate();
 
   // Initialize values for an empty form.
   let emptyFormValues = {
@@ -61,13 +61,11 @@ const AddCityForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-
     if (writeToLocalStorage()) {
-      console.log('submit processed');
+      console.log("submit processed");
       resetForm();
-      navigate('/NyStad');
+      navigate("/NyStad");
     }
-
   };
 
   // A function that sets the formValues state variable to the values of
@@ -94,12 +92,6 @@ const AddCityForm = () => {
   // to the storedCities array, then assigns localStorage.storedCities
   // a stringified JSON version of the storeCities.
   const writeToLocalStorage = () => {
-
-
-    // Converting a jsonfile to code and then we loop through each city in the array
-    // If there is an mach, return out of the function
-    // If there is an mach, store the city into the localStorage
-
     const jsonSearch = jsonfiles.find(
       (item) => item.city.toUpperCase() === formValues.city.toUpperCase()
     );
@@ -123,6 +115,7 @@ const AddCityForm = () => {
     city = city[0].toUpperCase() + city.slice(1, city.length);
     console.log(city);
     storedCities.push({ city: city, timezone: timezone });
+
     localStorage.storedCities = JSON.stringify(storedCities);
     return true;
   };
@@ -143,7 +136,6 @@ const AddCityForm = () => {
         {alreadyExists && (
           <p style={{ color: "yellow" }}>⚠ Staden finns redan i dina städer.</p>
         )}
-        
 
         <input
           type="text"

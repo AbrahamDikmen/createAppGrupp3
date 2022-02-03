@@ -45,7 +45,7 @@
   font-family: "Readex Pro", sans-serif;
 }
 
-#home {
+.background {
   background-image: url("/src/images/sky4.jpg");
   background-repeat: no-repeat;
   background-size: auto;

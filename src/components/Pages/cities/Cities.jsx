@@ -1,19 +1,27 @@
 import React from "react";
-import "../../../Styles/cities.css";
+
 import { useParams } from "react-router-dom";
 import DigitalClock from "../../DigitalClock";
 import "../../../Styles/DetailViewCities.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
+import GetPhoto from "../../GetPhoto";
 
 export const Cities = (props) => {
   let { city } = useParams();
 
-  // Finds an element where the "city" field is equal to the 
-  // value of the router param.
-  const cityData = props.cities.find((x) => x["city"] == city);
+  let cityData = props.cities.find((x) => x["city"] == city);
+
+  if (!cityData) {
+    let storedCities;
+    try {
+      storedCities = JSON.parse(localStorage.storedCities);
+    } catch (error) {
+      storedCities = [];
+    }
+    cityData = storedCities.find((x) => x["city"] == city);
+  }
 
   return (
     <Container fluid id="city-container">
@@ -24,7 +32,13 @@ export const Cities = (props) => {
               <h1>{cityData.city.replace("_", " ")}</h1>
               <DigitalClock timezone={cityData.timezone} />
               <h2 id="TimeZone">{cityData.timezone.replace("_", " ")}</h2>
-              <img id="cityImg" src={cityData.img} />
+
+              {cityData.img ? (
+                <img id="cityImg" src={cityData.img} />
+              ) : (
+                <GetPhoto theCity={city} />
+              )}
+
               {cityData.info && <p>{cityData.info}</p>}
             </>
           )}
@@ -33,5 +47,3 @@ export const Cities = (props) => {
     </Container>
   );
 };
-
-

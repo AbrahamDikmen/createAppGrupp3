@@ -6,8 +6,7 @@ import AnalogueNightMode from "../AnalogueNightMode";
 import Time from "../Time";
 import CityList from "../CityList";
 import DigitalClock from "../DigitalClock";
-import Container from "react-bootstrap/Container";
-
+import { Container } from "react-bootstrap";
 const Home = ({ nightMode, setNightMode }) => {
   let nightModeStyle = {};
 
@@ -48,7 +47,7 @@ const Home = ({ nightMode, setNightMode }) => {
 
   //CommentAli
   return (
-    <div id="home" style={home}>
+    <div className='background' style={home}>
       <Container style={container}>
         <div id="settings">
           <div className="toggle">{switchText}</div>
@@ -65,7 +64,6 @@ const Home = ({ nightMode, setNightMode }) => {
               role="switch"
               id="flexSwitchCheckDefault"
             />
-
           </div>
           <button onClick={toggleNightMode} id="nightmode-btn" style={btn}>
             <img

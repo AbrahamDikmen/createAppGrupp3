@@ -48,7 +48,7 @@ const Home = ({ nightMode, setNightMode }) => {
 
   //CommentAli
   return (
-    <div id="home" style={home}>
+    <div className='background' style={home}>
       <Container style={container}>
         <div id="settings">
           <div className="toggle">{switchText}</div>

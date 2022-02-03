@@ -10,7 +10,17 @@ import Col from "react-bootstrap/Col";
 export const Cities = (props) => {
   let { city } = useParams();
 
-  const cityData = props.cities.find((x) => x["city"] == city);
+  let cityData = props.cities.find((x) => x["city"] == city);
+
+  if (!cityData) {
+    let storedCities;
+    try {
+      storedCities = JSON.parse(localStorage.storedCities);
+    } catch (error) {
+      storedCities = [];
+    }
+    cityData = storedCities.find((x) => x["city"] == city);
+  }
 
   return (
     <Container fluid id="city-container">

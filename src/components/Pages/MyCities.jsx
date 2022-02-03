@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 import Modal from '../Modal';
 
 export default function MyCities({ cities }) {
-  /*
-  Renders a component containing links for the given list of cities.
-  The links reroutes to a detailed view for that city.
-  */
+  /**
+   * Renders a component containing links for the given list of cities.
+   * The links reroutes to a detailed view for that city.
+   */
 
   // fetching locally stored cities from utility function did not return 
   // the updated data, it must therefore be fetched directly from component
@@ -49,6 +49,11 @@ export default function MyCities({ cities }) {
   return (
     <div className="cities-container">
       {
+        /**
+         * When the showModal stateVariable has the value true a Modal component
+         * is displayed that prompts the user to accept or cancel the clearing
+         * of localStorage.
+         */
         showModal &&
         <Modal
           message={'Alla dina tillagda städer kommer att tas bort.'}

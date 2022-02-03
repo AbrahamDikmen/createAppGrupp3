@@ -11,6 +11,8 @@ import Col from "react-bootstrap/Col";
 export const Cities = (props) => {
   let { city } = useParams();
 
+  // Finds an element where the "city" field is equal to the 
+  // value of the router param.
   const cityData = props.cities.find((x) => x["city"] == city);
 
   return (

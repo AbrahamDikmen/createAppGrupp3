@@ -1,32 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import "../Styles/analogue-night-mode.css";
 
-export default function AnalogueClock() {
+export default function AnalogueNightMode() {
 
-    useEffect(() => {
-        const timer = setInterval(rotateHands, 1000);
-        return function cleanUp() { clearInterval(timer); }
-    }, [])
+    const [date, setDate] = useState(new Date());
 
-    function rotateHands() {
-        let time = new Date();
-        let hour = time.getHours() * 30 + (time.getMinutes() / 2);
-        let minute = time.getMinutes() * 6;
-        let second = time.getSeconds() * 6;
-        document.querySelector('#hour-hand').style.transform =
-            `rotate(${hour}deg)`;
-        document.querySelector('#minute-hand').style.transform =
-            `rotate(${minute}deg)`;
-        document.querySelector('#second-hand').style.transform =
-            `rotate(${second}deg)`;
+    function refreshClock() {
+        setDate(new Date());
     }
+    useEffect(() => {
+        const timerId = setInterval(refreshClock, 1000);
+        return function cleanup() {
+            clearInterval(timerId);
+        };
+    }, []);
 
     return <div id="analogue-clock">
-        <div id="hour-hand"></div>
-        <div id="minute-hand"></div>
-        <div id="second-hand"></div>
+        <div id="hour-hand" style={{ transform: `rotate(${date.getHours() * 30 + date.getMinutes() / 2}deg)`, }}></div>
+        <div id="minute-hand" style={{
+            transform: `rotateZ(${date.getMinutes() * 6}deg)`,
+        }}></div>
+        <div id="second-hand" style={{
+            transform: `rotateZ(${date.getSeconds() * 6}deg)`,
+        }}></div>
         <div id="dot"></div>
-       
+
         <div id="dot-1" className="dot"></div>
         <div id="dot-2" className="dot"></div>
         <div id="dot-3" className="dot"></div>

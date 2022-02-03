@@ -7,30 +7,12 @@ import Time from "../Time";
 import CityList from "../CityList";
 import DigitalClock from "../DigitalClock";
 import { Container } from "react-bootstrap";
-const Home = ({ nightMode, setNightMode }) => {
-  let nightModeStyle = {};
 
-  if (nightMode) {
-    nightModeStyle.img = {
-      filter: "initial",
-    };
-    nightModeStyle.btn = {
-      backgroundColor: "white",
-    };
-    nightModeStyle.home = {
-      backgroundImage: "url(/src/images/space.jpg)",
-      backgroundSize: "cover",
-    };
-    nightModeStyle.container = {
-      backgroundColor: "rgba(100, 100, 100, 0.4)",
-    };
-  }
+const Home = ({ nightMode, setNightMode }) => {
 
   const toggleNightMode = () => {
     setNightMode(!nightMode);
   };
-
-  let { img, btn, home, container } = nightModeStyle;
 
   //CommentAli
   const [toggle, setToggle] = useState(false);
@@ -47,8 +29,8 @@ const Home = ({ nightMode, setNightMode }) => {
 
   //CommentAli
   return (
-    <div className='background' style={home}>
-      <Container style={container}>
+    < div className='background' >
+      <Container>
         <div id="settings">
           <div className="toggle">{switchText}</div>
           <div
@@ -65,13 +47,12 @@ const Home = ({ nightMode, setNightMode }) => {
               id="flexSwitchCheckDefault"
             />
           </div>
-          <button onClick={toggleNightMode} id="nightmode-btn" style={btn}>
+          <button onClick={toggleNightMode} id="nightmode-btn">
             <img
               src="src/images/nightmode-btn.png"
               alt=""
               height="30"
               width="30"
-              style={img}
             />
           </button>
         </div>
@@ -89,7 +70,7 @@ const Home = ({ nightMode, setNightMode }) => {
         <CityList></CityList>
         <AddCityForm />
       </Container>
-    </div>
+    </div >
   );
 };
 export default Home;

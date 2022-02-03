@@ -11,9 +11,27 @@ import "./Styles/main.scss";
 import CityAdded from "./components/Pages/CityAdded";
 import { Cities } from "./components/Pages/cities/Cities";
 
+
 export default function App() {
   const [cities, setCities] = useState([]);
   const [nightMode, setNightMode] = useState(false);
+  // add/remove link tag from head depending on nightmode state
+  const addNightMode = () => {
+    let head = document.head;
+    // ensures that append only occurs on first rerender
+    if (head.querySelector('#night-mode-style')) return;
+    let link = document.createElement("link");
+    link.rel = 'stylesheet';
+    link.href = '/src/Styles/night-mode.css';
+    link.id = 'night-mode-style';
+    head.appendChild(link);
+  }
+  const removeNightMode = () => {
+    let head = document.head;
+    let e = head.querySelector('#night-mode-style');
+    e && e.remove();
+  }
+  nightMode ? addNightMode() : removeNightMode();
   // A function that parses the localStorage.storedCities field, assigns
   // storedCities the read values. If an error is raised while attempting
   // to parse the storedCities variable is assigned an empty array.

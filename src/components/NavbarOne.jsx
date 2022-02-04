@@ -9,13 +9,9 @@ import earth from "/src/images/earth.png";
 import { Link } from "react-router-dom";
 
 //here the navbar begins
-const NavbarOne = ({ nightMode }) => {
-  let nightModeStyle = {};
-  if (nightMode) {
-    nightModeStyle = { backgroundColor: "rgb(139, 139, 139)" };
-  }
+const NavbarOne = () => {
   return (
-    <Navbar id="navbarBackground" expand="lg" style={nightModeStyle}>
+    <Navbar id="navbarBackground" expand="lg">
       {/*The fluid makes the container responsive */}
       <Container fluid>
         <Navbar.Brand id="Logo" href="">

@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import Modal from "../Modal";
 
 export default function MyCities({ cities }) {
-  /*
-  Renders a component containing links for the given list of cities.
-  The links reroutes to a detailed view for that city.
-  */
+  /**
+   * Renders a component containing links for the given list of cities.
+   * The links reroutes to a detailed view for that city.
+   */
 
   // fetching locally stored cities from utility function did not return
   // the updated data, it must therefore be fetched directly from component
@@ -48,13 +48,19 @@ export default function MyCities({ cities }) {
 
   return (
     <div className="cities-container">
-      {showModal && (
-        <Modal
-          message={"Alla dina tillagda städer kommer att tas bort."}
-          question={"Vill du fortsätta?"}
-          callback={localStorageClear}
-        />
-      )}
+      {
+        /**
+         * When the showModal stateVariable has the value true a Modal component
+         * is displayed that prompts the user to accept or cancel the clearing
+         * of localStorage.
+         */
+        showModal && (
+          <Modal
+            message={"Alla dina tillagda städer kommer att tas bort."}
+            question={"Vill du fortsätta?"}
+            callback={localStorageClear}
+          />
+        )}
 
       <div className="cities-outer-wrapper">
         <div className="cities-inner-wrapper">
@@ -67,16 +73,16 @@ export default function MyCities({ cities }) {
              * Additionally a div with functionality to remove each city is rendered.
              */
             storedCities &&
-              storedCities.map((item, i) => (
-                <div key={i} className="city-link-wrapper">
-                  <Link to={`/${item.city}`} className="link-item">
-                    <div>{item.city}</div>
-                  </Link>
-                  <div onClick={() => removeCity(i)} className="remove-city">
-                    X
-                  </div>
+            storedCities.map((item, i) => (
+              <div key={i} className="city-link-wrapper">
+                <Link to={`/${item.city}`} className="link-item">
+                  <div>{item.city}</div>
+                </Link>
+                <div onClick={() => removeCity(i)} className="remove-city">
+                  X
                 </div>
-              ))
+              </div>
+            ))
           }
 
           {

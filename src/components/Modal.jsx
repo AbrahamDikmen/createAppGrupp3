@@ -3,6 +3,10 @@ import '../Styles/modal.css';
 
 
 export default function Modal({ message, question, callback }) {
+    /**
+     * A modal component that displays the given input for 'message'
+     * and 'question' and prompts the user to give 'Ok' or 'Cancel'.
+     */
 
     return (
         <div className="modal-wrapper">

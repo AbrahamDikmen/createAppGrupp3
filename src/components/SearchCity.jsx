@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { CloseButton } from "react-bootstrap";
 import SearchIcon from "@mui/icons-material/Search";
 
+//A fuction that let us use the input field
 export function SearchCity({ data }) {
+  //useState hooks for both of the searching-word that the user types in and for a search-filter to appear
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
 
@@ -14,14 +16,12 @@ export function SearchCity({ data }) {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
 
-    //  These gives us new arrays depending on what we have been searching for
-
+    // These gives us new arrays depending on what we have been searching for
     const newFilter = data.filter((value) => {
       return value.city.toLowerCase().includes(searchWord.toLowerCase());
     });
 
-    // Cleans the search filter if there is no text in the "search box"
-
+    // Cleans the search filter if there is no text in the input field and returns arrays depending on what the user types in
     if (searchWord === "") {
       setFilteredData([]);
     } else {

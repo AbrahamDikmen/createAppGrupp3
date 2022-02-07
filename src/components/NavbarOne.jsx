@@ -37,6 +37,7 @@ const NavbarOne = () => {
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
+            {/*Props to send data to the searchCity file*/}
             <SearchCity data={jsonfiles} />
           </Form>
         </Navbar.Collapse>

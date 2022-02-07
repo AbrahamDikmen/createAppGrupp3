@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 
 const GetGeo = () => {
   const [details, setDetails] = useState(null);
+
   const [timeString, setTimeString] = useState(new Date().toLocaleTimeString());
 
+  //A function to fetch the local info that the user is located in
   const getUserGeolocationDetails = () => {
     fetch(
       "https://geolocation-db.com/json/d802faa0-10bd-11ec-b2fe-47a0872c6708"

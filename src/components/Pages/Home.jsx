@@ -32,13 +32,16 @@ const Home = ({ nightMode, setNightMode }) => {
   };
 
   let { img, btn, home, container } = nightModeStyle;
-
-  //CommentAli
+  
+  //Using a react hook(useState), toggle is a constant and setToggle is a set function.
   const [toggle, setToggle] = useState(false);
+  
+  //This hook makes the toggle to switch betwen analog and digital text. 
   const [switchText, setSwitchTest] = useState(<h6>Switch to Digital</h6>);
+
+  //if statement that switches betwen Analog and Digital clock.
   const handleToggle = () => {
     setToggle(!toggle);
-
     if (!toggle) {
       setSwitchTest(<h6>Switch to Analog</h6>);
     } else if (toggle) {
@@ -46,7 +49,7 @@ const Home = ({ nightMode, setNightMode }) => {
     }
   };
 
-  //CommentAli
+  
   return (
     <div id="home" style={home}>
       <Container style={container}>
@@ -54,8 +57,9 @@ const Home = ({ nightMode, setNightMode }) => {
           <div className="toggle">{switchText}</div>
           <div
             className="form-check form-switch"
-            onClick={() => handleToggle()}
+            onClick={() => handleToggle()}  
           >
+  
             <input
               height="30"
               width="30"
